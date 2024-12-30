@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Intro to Marine Data Science",
+    "section": "",
+    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that excite you and work through them with a partner. Each lesson has readings, recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Intro to Marine Data Science",
+    "section": "",
+    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that excite you and work through them with a partner. Each lesson has readings, recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Intro to Marine Data Science",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy\nEmail: maxczap@ucsb.edu\n\n\n\n\nLearning Assistant\n\n\n\n\n\n\n\n\n\n\n\nHayden Vega\nEmail: haydenvega@umail.ucsb.edu"
+  }
+]
