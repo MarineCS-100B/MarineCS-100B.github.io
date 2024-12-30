@@ -1,13 +1,13 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "MarineCS-100B.github.io"
+  title: "Intro to Marine Data Science"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:

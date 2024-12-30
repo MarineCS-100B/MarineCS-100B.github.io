@@ -1,11 +1,75 @@
 ---
-title: "MarineCS-100B.github.io"
+title: "Intro to Marine Data Science"
+subtitle: "CCS Marine Science"
+description: "Winter 2025"
+title-block-banner: false
+toc: false
 ---
 
-This is a Quarto website.
+## Course description
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.
+
+### Some concepts we'll cover:
+
+-   Computational thinking and writing code (**Programming**)
+
+-   Describing and simulating data (**Probability and statistics**)
+
+-   Organizing, sharing, and finding data (**Informatics**)
+
+-   Communicating your results and data science workflow (**Communication**)
+
+### Course format
+
+*Intro to Marine Data Science* is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That's hard to do in traditional class formats because you're all entering this class with diverse experiences, interests, and goals.
+
+This class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that excite you and work through them with a partner. Each lesson has readings, recorded lectures, and exercises for you to complete before class. In class, you'll apply the skills from that lesson to real-world questions, like:
+
+-   Where are the world's oceans warming the fastest?
+
+-   Are deep-sea fish and invertebrates important prey for marine predators?
+
+-   How can we fill in the at-sea data collection gaps caused by Covid?
+
+## Teaching Team
+
+::::::::: grid
+::::: {.g-col-12 .g-col-md-6}
+::: {.center-text .body-text-l}
+**Instructor**
+:::
 
 ```{r}
-1 + 1
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "45%" 
+knitr::include_graphics("images/MFC headshot.png")
 ```
+
+::: center-text
+[**Max Czapanskiy**]{.teal-text}\
+**Email:** [maxczap\@ucsb.edu](mailto::maxczap@ucsb.edu)
+:::
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+::: {.center-text .body-text-l}
+**Learning Assistant**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "45%" 
+knitr::include_graphics("images/MFC headshot.png")
+```
+
+::: center-text
+[**Hayden Vega**]{.teal-text}\
+**Email:** [haydenvega\@umail.ucsb.edu](mailto::haydenvega@umail.ucsb.edu)
+:::
+:::::
+:::::::::
