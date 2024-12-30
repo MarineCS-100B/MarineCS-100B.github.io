@@ -5,9 +5,39 @@ project:
 website:
   title: "Intro to Marine Data Science"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
+    right:
+      - text: "PROG"
+        menu:
+          - tracks/prog/prog101.qmd
+          - tracks/prog/prog102.qmd
+          - tracks/prog/prog103.qmd
+          - tracks/prog/prog104.qmd
+          - tracks/prog/prog201.qmd
+          - tracks/prog/prog202.qmd
+      - text: "PRST"
+        menu:
+          - tracks/prst/prst101.qmd
+          - tracks/prst/prst102.qmd
+          - tracks/prst/prst103.qmd
+          - tracks/prst/prst104.qmd
+          - tracks/prst/prst201.qmd
+          - tracks/prst/prst202.qmd
+      - text: "INFO"
+        menu:
+          - tracks/info/info101.qmd
+          - tracks/info/info102.qmd
+          - tracks/info/info103.qmd
+          - tracks/info/info104.qmd
+          - tracks/info/info201.qmd
+          - tracks/info/info202.qmd
+      - text: "COMM"
+        menu:
+          - tracks/comm/comm101.qmd
+          - tracks/comm/comm102.qmd
+          - tracks/comm/comm103.qmd
+          - tracks/comm/comm104.qmd
+          - tracks/comm/comm201.qmd
+          - tracks/comm/comm202.qmd
 
 format:
   html:
