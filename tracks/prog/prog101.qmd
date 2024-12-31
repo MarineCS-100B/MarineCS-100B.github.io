@@ -1,3 +1,129 @@
 ---
 title: "PROG101: Intro to R and RStudio"
+execute: 
+  eval: false
+bibliography: references.bib
 ---
+
+This is the first module of the **Programming** track. By the end of this module, you'll learn how to:
+
+-   Write and run R code in the RStudio IDE
+
+-   Store and access data in vectors
+
+-   Call functions to manipulate data
+
+## Pre-class preparation
+
+| {{< fa film title="A roll of film" >}} Lecture | {{< fa clipboard title="A clipboard" >}} Notes | {{< fa dumbbell title="A dumbbell" >}} Exercises |
+|------------------------|------------------------|------------------------|
+| Introduction to R and RStudio |  |  |
+| Expressions and variables in R |  |  |
+| Using functions |  |  |
+| Basic vectors |  |  |
+| Working with multiple vectors |  |  |
+
+## In-class activity
+
+### Extreme temperatures in an Alaskan intertidal zone
+
+The intertidal zone is where the marine and terrestrial biomes meet. Organisms in this habitat must be able to withstand saltwater immersion, air exposure, and the impact of crashing waves. Some intertidal species are particularly important to both human and ecological communities, including bivalve shellfish like oysters, clams, and mussels. Bivalves may experience direct negative impacts from rising ocean temperatures, but they may receive indirect positive impacts from declining predator populations. From 2014-2016, an extreme marine heatwave gripped the North Pacific, popularly called "The Blob". Around the same time, in 2013-2014, an outbreak of sea star wasting disease decimated sea stars along the North American Pacific coast, dramatically reducing the populations of these important bivalve predators. These two events could potentially push Alaskan mussel populations in opposing directions, which raises the question: have bivalves been winners or losers in a changing climate? Traiger et al. investigated this question using long-term monitoring data collected around the Gulf of Alaska [@traiger2022]. Key to their study was an analysis of extreme air temperature. In this activity, you will replicate that part of their methods. Follow the assignment submission guidelines when you've completed this activity.
+
+::: callout-note
+The template repository for this module is available at [MarineCS-100B/prog101](https://github.com/MarineCS-100B/prog101).
+:::
+
+### Guiding questions
+
+Read the abstract and sections 2-2.1 of the methods in Traiger et al., then answer the following questions.
+
+-   What does KEFJ stand for?
+
+-   How was temperature monitored?
+
+-   What's the difference between absolute temperature and temperature anomaly?
+
+### Begin exploring
+
+The temperature and associated data from KEFJ is available in the `marinecs100b` R package. Use `?kefj` to open the help page for these data.
+
+-   How many `kefj_*` vectors are there?
+
+-   How long are they?
+
+-   What do they represent?
+
+Now it's time to begin coding! I want you to figure out the *most common* sampling interval for the temperature readings. First, sketch a plan on a piece of paper. Which vectors will you need to use? How are they related to each other? What operators or functions will you need?
+
+::: callout-tip
+The function `table()` will help you out here.
+:::
+
+Now, fill in the blanks below to get the most common sampling interval. Add comments describing what each line of code does.
+
+```{r}
+#| label: samp-intervals
+
+???_datetime <- kefj_datetime[kefj_site == ???]
+???_interval <- ???_datetime[-1] - ???_datetime[-???]
+t???e(???)
+
+```
+
+::: callout-note
+This is your first time dealing with dates and times in R. It's going to take you a while to get used to them and you'll definitely pull some hair out along the way. "Why isn't this simpler??" you'll ask. I wish it could be! But unfortunately we humans treat time in super weird ways and it's next to impossible to represent it simply. Read ["UTC is enough for everyone ...*right?*"](https://zachholman.com/talk/utc-is-enough-for-everyone-right) by Zach Holman for a humorous (if crass) breakdown of how we got into such a tangled situation.
+:::
+
+### Problem decomposition
+
+Look how big the `kefj_*` vectors are. That's way too big to tackle all at once! It's always a good idea to break big, intractable problems down into smaller, digestible components. Let's begin by finding the hottest and coldest air temperature readings in the dataset. When and where did these extremes happen? Use `plot_kefj()` to visualize the temperature readings for the days containing those readings. Before you start filling in the blanks in the code below, first sketch your plan for answering these questions. Make sure to consider which vectors you'll need and how they relate to each other! When you start filling in the code below, add comments to each line of code describing what it does.
+
+::: callout-tip
+Check out `which.min()` and `which.max()`
+:::
+
+```{r}
+#| label: hot-cold-days
+
+# Plot the hottest day
+
+hottest_idx <- ???(kefj_temperature)
+hottest_time <- ???[hottest_idx]
+??? <- kefj_site[???]
+hotday_start <- as.POSIXct("???", tz = "Etc/GMT+8")
+hotday_end <- as.POSIXct("???", tz = "Etc/GMT+8")
+hotday_idx <- ??? == hottest_site &
+  ??? >= hotday_start &
+  ??? <= hotday_end
+hotday_datetime <- ???[hotday_idx]
+hotday_temperature <- ???
+hotday_exposure <- ???
+plot_kefj(???, ???, ???)
+
+# Repeat for the coldest day
+
+```
+
+Examine your visualizations. What patterns do you notice in time, temperature, and exposure? Do those patterns match your intuition, or do they differ?
+
+Now that you've visualized the extreme temperatures you're ready to begin calculating extreme temperature exposure. Re-read section 2.1 of Traiger et al. How did they define extreme heat exposure? Translate their written description to code and calculate the extreme heat exposure for the hottest day. Compare your answer to the visualization you made. Does it look right to you? Repeat this process for extreme cold exposure on the coldest day.
+
+### Putting it together
+
+Let's go from analyzing a single day to a whole season. Re-read how Traiger et al. quantified extreme hot and cold air temperature exposures at the seasonal scale. Make a sketch of how you would do that for a single site and season.
+
+Pick one site and one season. What were the extreme heat and cold exposure at that site in that season? Repeat for a different site and a different season.
+
+Optional extension: Traiger et al. also calculated water temperature anomalies. Consider how you could do that. Make a sketch showing which vectors you would need and how you would use them. Write code to get the temperature anomalies for one site in one season in one year.
+
+## Recap and next steps
+
+In this module you started using R to represent and manipulate data. That's a critical skill for a marine data scientist!
+
+Future modules in this track will build on what you've learned here.
+
+-   In this module, you called built-in R functions like `which.min()` and `table()`. In PROG102 you'll learn how to write your own functions to *encapsulate* tasks like calculating extreme temperature exposure.
+
+-   PROG103 will cover branches and loops. Recall how you had to copy-paste-edit code in this module to apply the same task to different inputs (e.g., extreme hot vs extreme cold, one site vs another). That's a time-consuming and error-prone way of doing things. Branches and loops are the solution for making choices and repeating operations.
+
+Fill out the [PROG101 reflection](https://docs.google.com/forms/d/e/1FAIpQLScZVxg7JKIkqeO4GwIpU0HP_pycPq0Gplw5tk6P10EGfDsQ9Q/viewform?usp=header) to complete this module. Well done!
