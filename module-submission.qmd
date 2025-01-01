@@ -1,0 +1,33 @@
+---
+title: "Module submission instructions"
+---
+
+## Overview
+
+We will use GitHub for submitting module deliverables. The submission steps are:
+
+1.  Create your own *remote* repo on GitHub from the module template repo.
+2.  Create your *local* repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.
+3.  *Commit* your changes in the local repo.
+4.  *Push* your local commit to the remote repo.
+5.  Open an *Issue* on GitHub and tag the instructors.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.8000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGa_YYm_t8/BtqXQ9xPu28GuPZL6Sg8QQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+```
+
+## Step 1: Create your *remote*
+
+## Step 2: Clone your *local*
+
+## Step 3: *Commit* your changes
+
+## Step 4: *Push* your commits
+
+## Step 5: Open an *Issue*

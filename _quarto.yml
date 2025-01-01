@@ -38,7 +38,9 @@ website:
           - tracks/comm/comm104.qmd
           - tracks/comm/comm201.qmd
           - tracks/comm/comm202.qmd
-
+      - text: "More"
+        menu:
+          - module-submission.qmd
 format:
   html:
     theme: cosmo

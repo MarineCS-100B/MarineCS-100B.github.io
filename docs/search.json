@@ -54,5 +54,54 @@
     "title": "Intro to Marine Data Science",
     "section": "Teaching Team",
     "text": "Teaching Team\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy\nEmail: maxczap@ucsb.edu\n\n\n\n\nLearning Assistant\n\n\n\n\n\n\n\n\n\n\n\nHayden Vega\nEmail: haydenvega@umail.ucsb.edu"
+  },
+  {
+    "objectID": "module-submission.html",
+    "href": "module-submission.html",
+    "title": "Module submission instructions",
+    "section": "",
+    "text": "We will use GitHub for submitting module deliverables. The submission steps are:\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors."
+  },
+  {
+    "objectID": "module-submission.html#overview",
+    "href": "module-submission.html#overview",
+    "title": "Module submission instructions",
+    "section": "",
+    "text": "We will use GitHub for submitting module deliverables. The submission steps are:\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors."
+  },
+  {
+    "objectID": "module-submission.html#step-1-create-your-remote",
+    "href": "module-submission.html#step-1-create-your-remote",
+    "title": "Module submission instructions",
+    "section": "Step 1: Create your remote",
+    "text": "Step 1: Create your remote"
+  },
+  {
+    "objectID": "module-submission.html#step-2-clone-your-local",
+    "href": "module-submission.html#step-2-clone-your-local",
+    "title": "Module submission instructions",
+    "section": "Step 2: Clone your local",
+    "text": "Step 2: Clone your local"
+  },
+  {
+    "objectID": "module-submission.html#step-3-commit-your-changes",
+    "href": "module-submission.html#step-3-commit-your-changes",
+    "title": "Module submission instructions",
+    "section": "Step 3: Commit your changes",
+    "text": "Step 3: Commit your changes"
+  },
+  {
+    "objectID": "module-submission.html#step-4-push-your-commits",
+    "href": "module-submission.html#step-4-push-your-commits",
+    "title": "Module submission instructions",
+    "section": "Step 4: Push your commits",
+    "text": "Step 4: Push your commits"
+  },
+  {
+    "objectID": "module-submission.html#step-5-open-an-issue",
+    "href": "module-submission.html#step-5-open-an-issue",
+    "title": "Module submission instructions",
+    "section": "Step 5: Open an Issue",
+    "text": "Step 5: Open an Issue"
   }
 ]
