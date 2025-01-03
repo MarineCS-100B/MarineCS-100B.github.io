@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -240,11 +260,17 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#pre-module-setup" id="toc-pre-module-setup" class="nav-link" data-scroll-target="#pre-module-setup">Pre-module setup</a>
+  <ul class="collapse">
   <li><a href="#step-1-create-your-remote" id="toc-step-1-create-your-remote" class="nav-link" data-scroll-target="#step-1-create-your-remote">Step 1: Create your <em>remote</em></a></li>
-  <li><a href="#step-2-clone-your-local" id="toc-step-2-clone-your-local" class="nav-link" data-scroll-target="#step-2-clone-your-local">Step 2: Clone your <em>local</em></a></li>
+  <li><a href="#step-2-clone-your-local-repo" id="toc-step-2-clone-your-local-repo" class="nav-link" data-scroll-target="#step-2-clone-your-local-repo">Step 2: Clone your <em>local</em> repo</a></li>
+  </ul></li>
+  <li><a href="#post-module-submission" id="toc-post-module-submission" class="nav-link" data-scroll-target="#post-module-submission">Post-module submission</a>
+  <ul class="collapse">
   <li><a href="#step-3-commit-your-changes" id="toc-step-3-commit-your-changes" class="nav-link" data-scroll-target="#step-3-commit-your-changes">Step 3: <em>Commit</em> your changes</a></li>
   <li><a href="#step-4-push-your-commits" id="toc-step-4-push-your-commits" class="nav-link" data-scroll-target="#step-4-push-your-commits">Step 4: <em>Push</em> your commits</a></li>
   <li><a href="#step-5-open-an-issue" id="toc-step-5-open-an-issue" class="nav-link" data-scroll-target="#step-5-open-an-issue">Step 5: Open an <em>Issue</em></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -272,13 +298,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>We will use GitHub for submitting module deliverables. The submission steps are:</p>
+<p>We’re using Git and GitHub for submitting modules. Git is a <em>version control system</em> for tracking changes you make to files. GitHub is a <em>hosting service</em> for distributing Git repositories. These tools are essential for collaborative coding projects and it’s important to your development as a data scientist that you learn how to use them.</p>
+<p>That said, Git and GitHub have a difficult learning curve. In this course, we’re going to limit ourselves to using some basic features. In future courses or when you’re doing research in a lab, you’ll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading <span class="citation" data-cites="bryan2018">Bryan (<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>In brief, module submission has five steps. You’ll do the first two to set up your computer for the module, then you’ll do the last three when you’re ready to submit.</p>
 <ol type="1">
-<li>Create your own <em>remote</em> repo on GitHub from the module template repo.</li>
-<li>Create your <em>local</em> repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.</li>
-<li><em>Commit</em> your changes in the local repo.</li>
-<li><em>Push</em> your local commit to the remote repo.</li>
-<li>Open an <em>Issue</em> on GitHub and tag the instructors.</li>
+<li><p>Create your own <em>remote</em> repo on GitHub from the module template repo.</p></li>
+<li><p>Create your <em>local</em> repo by cloning your remote to your computer.</p></li>
+</ol>
+<p>Now your computer is set up for the module. Complete the activity according to the instructions on the course website. When you’re done, proceed to the following steps.</p>
+<ol start="3" type="1">
+<li><p><em>Commit</em> your changes in the local repo.</p></li>
+<li><p><em>Push</em> your local commit to the remote repo.</p></li>
+<li><p>Open an <em>Issue</em> on GitHub and tag the instructors.</p></li>
 </ol>
 <div style="position: relative; width: 100%; height: 0; padding-top: 56.8000%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
@@ -286,26 +317,51 @@ ul.task-list li input[type="checkbox"] {
   <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAGa_YYm_t8/BtqXQ9xPu28GuPZL6Sg8QQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
+<p>More detailed instructions below.</p>
 </section>
-<section id="step-1-create-your-remote" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-create-your-remote">Step 1: Create your <em>remote</em></h2>
+<section id="pre-module-setup" class="level2">
+<h2 class="anchored" data-anchor-id="pre-module-setup">Pre-module setup</h2>
+<section id="step-1-create-your-remote" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-your-remote">Step 1: Create your <em>remote</em></h3>
+<p>Navigate to the template repo on GitHub. Click on <strong>Use this template &gt; Create a new repository</strong>.</p>
+<p><img src="images/submission-instructions/1-create-repo-from-template.png" class="img-fluid" alt="Screenshot of GitHub template repo with link to &quot;Create a new repository&quot; highlighted"></p>
 </section>
-<section id="step-2-clone-your-local" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-clone-your-local">Step 2: Clone your <em>local</em></h2>
+<section id="step-2-clone-your-local-repo" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-clone-your-local-repo">Step 2: Clone your <em>local</em> repo</h3>
+<p>Copy your remote repo’s URL (<strong>A</strong>) then switch over to RStudio and create a new RStudio project (<strong>B</strong>). In the New Project Wizard, choose <strong>Version Control &gt; Git</strong> then paste your URL and choose the local directory where you want to keep your local repositories (<strong>C-E</strong>). After clicking <strong>Create Project</strong>, RStudio will relaunch; you should see the project name updated in the top right and the Files pane should show the files from the template repo (<strong>F</strong>).</p>
+<p><img src="images/submission-instructions/2-clone-local-repo.png" class="img-fluid" alt="Screenshots of creating an RStudio project from version control"></p>
+<p>At this point you’re ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub.</p>
 </section>
-<section id="step-3-commit-your-changes" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-commit-your-changes">Step 3: <em>Commit</em> your changes</h2>
 </section>
-<section id="step-4-push-your-commits" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-push-your-commits">Step 4: <em>Push</em> your commits</h2>
+<section id="post-module-submission" class="level2">
+<h2 class="anchored" data-anchor-id="post-module-submission">Post-module submission</h2>
+<p>We’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.</p>
+<p><img src="images/submission-instructions/3-add-github.gif" class="img-fluid" alt="A screen recording of adding a local repository to GitHub Desktop."></p>
+<section id="step-3-commit-your-changes" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-commit-your-changes">Step 3: <em>Commit</em> your changes</h3>
+<p>After you complete the module it’s time to commit your changes. This updates your <em>local</em> repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue <strong>Commit to main</strong> button.</p>
+<p><img src="images/submission-instructions/3-commit-changes.png" class="img-fluid" alt="Screenshot of committing file changes in GitHub Desktop"></p>
 </section>
-<section id="step-5-open-an-issue" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-open-an-issue">Step 5: Open an <em>Issue</em></h2>
+<section id="step-4-push-your-commits" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-push-your-commits">Step 4: <em>Push</em> your commits</h3>
+<p>After committing, you should no longer see any changed files. Click the <strong>Push origin</strong> button (<strong>A</strong>). This updates your remote repo on GitHub, which you can see online (<strong>B</strong>).</p>
+<p><img src="images/submission-instructions/4-push-commit.png" class="img-fluid" alt="Screenshots of GitHub Desktop and a browser showing the push command"></p>
+</section>
+<section id="step-5-open-an-issue" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-open-an-issue">Step 5: Open an <em>Issue</em></h3>
+<p>Click the Issues tab on GitHub (in the browser) and create a new <em>Issue</em>. Mention me (@FlukeAndFeather) in the Issue, which will let me know you’ve submitted your module. Congrats! You’re done!</p>
+<p><img src="images/submission-instructions/5-create-issue.png" class="img-fluid" alt="Screenshot of an Issue on GitHub"></p>
 
 
+
+</section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bryan2018" class="csl-entry" role="listitem">
+Bryan, Jennifer. 2018. <span>“Excuse Me, Do You Have a Moment to Talk About Version Control?”</span> <em>The American Statistician</em> 72 (1): 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -60,14 +60,14 @@
     "href": "module-submission.html",
     "title": "Module submission instructions",
     "section": "",
-    "text": "We will use GitHub for submitting module deliverables. The submission steps are:\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors."
+    "text": "We’re using Git and GitHub for submitting modules. Git is a version control system for tracking changes you make to files. GitHub is a hosting service for distributing Git repositories. These tools are essential for collaborative coding projects and it’s important to your development as a data scientist that you learn how to use them.\nThat said, Git and GitHub have a difficult learning curve. In this course, we’re going to limit ourselves to using some basic features. In future courses or when you’re doing research in a lab, you’ll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading Bryan (2018).\nIn brief, module submission has five steps. You’ll do the first two to set up your computer for the module, then you’ll do the last three when you’re ready to submit.\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer.\n\nNow your computer is set up for the module. Complete the activity according to the instructions on the course website. When you’re done, proceed to the following steps.\n\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors.\n\n\n  \n  \n\nMore detailed instructions below."
   },
   {
     "objectID": "module-submission.html#overview",
     "href": "module-submission.html#overview",
     "title": "Module submission instructions",
     "section": "",
-    "text": "We will use GitHub for submitting module deliverables. The submission steps are:\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors."
+    "text": "We’re using Git and GitHub for submitting modules. Git is a version control system for tracking changes you make to files. GitHub is a hosting service for distributing Git repositories. These tools are essential for collaborative coding projects and it’s important to your development as a data scientist that you learn how to use them.\nThat said, Git and GitHub have a difficult learning curve. In this course, we’re going to limit ourselves to using some basic features. In future courses or when you’re doing research in a lab, you’ll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading Bryan (2018).\nIn brief, module submission has five steps. You’ll do the first two to set up your computer for the module, then you’ll do the last three when you’re ready to submit.\n\nCreate your own remote repo on GitHub from the module template repo.\nCreate your local repo by cloning your remote to your computer.\n\nNow your computer is set up for the module. Complete the activity according to the instructions on the course website. When you’re done, proceed to the following steps.\n\nCommit your changes in the local repo.\nPush your local commit to the remote repo.\nOpen an Issue on GitHub and tag the instructors.\n\n\n  \n  \n\nMore detailed instructions below."
   },
   {
     "objectID": "module-submission.html#step-1-create-your-remote",
@@ -103,5 +103,19 @@
     "title": "Module submission instructions",
     "section": "Step 5: Open an Issue",
     "text": "Step 5: Open an Issue"
+  },
+  {
+    "objectID": "module-submission.html#pre-module-setup",
+    "href": "module-submission.html#pre-module-setup",
+    "title": "Module submission instructions",
+    "section": "Pre-module setup",
+    "text": "Pre-module setup\n\nStep 1: Create your remote\nNavigate to the template repo on GitHub. Click on Use this template &gt; Create a new repository.\n\n\n\nStep 2: Clone your local repo\nCopy your remote repo’s URL (A) then switch over to RStudio and create a new RStudio project (B). In the New Project Wizard, choose Version Control &gt; Git then paste your URL and choose the local directory where you want to keep your local repositories (C-E). After clicking Create Project, RStudio will relaunch; you should see the project name updated in the top right and the Files pane should show the files from the template repo (F).\n\nAt this point you’re ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub."
+  },
+  {
+    "objectID": "module-submission.html#post-module-submission",
+    "href": "module-submission.html#post-module-submission",
+    "title": "Module submission instructions",
+    "section": "Post-module submission",
+    "text": "Post-module submission\nWe’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.\n\n\nStep 3: Commit your changes\nAfter you complete the module it’s time to commit your changes. This updates your local repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue Commit to main button.\n\n\n\nStep 4: Push your commits\nAfter committing, you should no longer see any changed files. Click the Push origin button (A). This updates your remote repo on GitHub, which you can see online (B).\n\n\n\nStep 5: Open an Issue\nClick the Issues tab on GitHub (in the browser) and create a new Issue. Mention me (@FlukeAndFeather) in the Issue, which will let me know you’ve submitted your module. Congrats! You’re done!"
   }
 ]

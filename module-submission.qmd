@@ -1,15 +1,26 @@
 ---
 title: "Module submission instructions"
+bibliography: references.bib
 ---
 
 ## Overview
 
-We will use GitHub for submitting module deliverables. The submission steps are:
+We're using Git and GitHub for submitting modules. Git is a *version control system* for tracking changes you make to files. GitHub is a *hosting service* for distributing Git repositories. These tools are essential for collaborative coding projects and it's important to your development as a data scientist that you learn how to use them.
+
+That said, Git and GitHub have a difficult learning curve. In this course, we're going to limit ourselves to using some basic features. In future courses or when you're doing research in a lab, you'll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading @bryan2018.
+
+In brief, module submission has five steps. You'll do the first two to set up your computer for the module, then you'll do the last three when you're ready to submit.
 
 1.  Create your own *remote* repo on GitHub from the module template repo.
-2.  Create your *local* repo by cloning your remote to your computer. Edit your local repo to complete the module deliverable.
+
+2.  Create your *local* repo by cloning your remote to your computer.
+
+Now your computer is set up for the module. Complete the activity according to the instructions on the course website. When you're done, proceed to the following steps.
+
 3.  *Commit* your changes in the local repo.
+
 4.  *Push* your local commit to the remote repo.
+
 5.  Open an *Issue* on GitHub and tag the instructors.
 
 ```{=html}
@@ -22,12 +33,44 @@ We will use GitHub for submitting module deliverables. The submission steps are:
 </div>
 ```
 
-## Step 1: Create your *remote*
+More detailed instructions below.
 
-## Step 2: Clone your *local*
+## Pre-module setup
 
-## Step 3: *Commit* your changes
+### Step 1: Create your *remote*
 
-## Step 4: *Push* your commits
+Navigate to the template repo on GitHub. Click on **Use this template \> Create a new repository**.
 
-## Step 5: Open an *Issue*
+![](images/submission-instructions/1-create-repo-from-template.png){fig-alt="Screenshot of GitHub template repo with link to \"Create a new repository\" highlighted"}
+
+### Step 2: Clone your *local* repo
+
+Copy your remote repo's URL (**A**) then switch over to RStudio and create a new RStudio project (**B**). In the New Project Wizard, choose **Version Control \> Git** then paste your URL and choose the local directory where you want to keep your local repositories (**C-E**). After clicking **Create Project**, RStudio will relaunch; you should see the project name updated in the top right and the Files pane should show the files from the template repo (**F**).
+
+![](images/submission-instructions/2-clone-local-repo.png){fig-alt="Screenshots of creating an RStudio project from version control"}
+
+At this point you're ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub.
+
+## Post-module submission
+
+We'll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.
+
+![](images/submission-instructions/3-add-github.gif){fig-alt="A screen recording of adding a local repository to GitHub Desktop."}
+
+### Step 3: *Commit* your changes
+
+After you complete the module it's time to commit your changes. This updates your *local* repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue **Commit to main** button.
+
+![](images/submission-instructions/3-commit-changes.png){fig-alt="Screenshot of committing file changes in GitHub Desktop"}
+
+### Step 4: *Push* your commits
+
+After committing, you should no longer see any changed files. Click the **Push origin** button (**A**). This updates your remote repo on GitHub, which you can see online (**B**).
+
+![](images/submission-instructions/4-push-commit.png){fig-alt="Screenshots of GitHub Desktop and a browser showing the push command"}
+
+### Step 5: Open an *Issue*
+
+Click the Issues tab on GitHub (in the browser) and create a new *Issue*. Mention me (\@FlukeAndFeather) in the Issue, which will let me know you've submitted your module. Congrats! You're done!
+
+![](images/submission-instructions/5-create-issue.png){fig-alt="Screenshot of an Issue on GitHub"}

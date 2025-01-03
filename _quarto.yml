@@ -41,6 +41,10 @@ website:
       - text: "More"
         menu:
           - module-submission.qmd
+
+execute:
+  freeze: auto
+
 format:
   html:
     theme: cosmo
