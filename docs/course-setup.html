@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Marine Data Science – PRST103: Hypothesis testing</title>
+<title>Intro to Marine Data Science – Course Setup Instructions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Intro to Marine Data Science</span>
     </a>
   </div>
@@ -94,27 +128,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-prog">    
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog101.html">
+    <a class="dropdown-item" href="./tracks/prog/prog101.html">
  <span class="dropdown-text">PROG101: Intro to R and RStudio</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog102.html">
+    <a class="dropdown-item" href="./tracks/prog/prog102.html">
  <span class="dropdown-text">PROG102: Functions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog103.html">
+    <a class="dropdown-item" href="./tracks/prog/prog103.html">
  <span class="dropdown-text">PROG103: Branches and Loops</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog104.html">
+    <a class="dropdown-item" href="./tracks/prog/prog104.html">
  <span class="dropdown-text">PROG104: Algorithms</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog201.html">
+    <a class="dropdown-item" href="./tracks/prog/prog201.html">
  <span class="dropdown-text">PROG201: Working with Text and REGEX</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prog/prog202.html">
+    <a class="dropdown-item" href="./tracks/prog/prog202.html">
  <span class="dropdown-text">PROG202: Creating R Packages</span></a>
   </li>  
     </ul>
@@ -125,27 +159,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-prst">    
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst101.html">
+    <a class="dropdown-item" href="./tracks/prst/prst101.html">
  <span class="dropdown-text">PRST101: Intro to Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst102.html">
+    <a class="dropdown-item" href="./tracks/prst/prst102.html">
  <span class="dropdown-text">PRST102: Probability</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst103.html">
+    <a class="dropdown-item" href="./tracks/prst/prst103.html">
  <span class="dropdown-text">PRST103: Hypothesis testing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst104.html">
+    <a class="dropdown-item" href="./tracks/prst/prst104.html">
  <span class="dropdown-text">PRST104: Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst201.html">
+    <a class="dropdown-item" href="./tracks/prst/prst201.html">
  <span class="dropdown-text">PRST201: Clustering</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/prst/prst202.html">
+    <a class="dropdown-item" href="./tracks/prst/prst202.html">
  <span class="dropdown-text">PRST202: Nonlinear regression</span></a>
   </li>  
     </ul>
@@ -156,27 +190,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-info">    
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info101.html">
+    <a class="dropdown-item" href="./tracks/info/info101.html">
  <span class="dropdown-text">INFO101: Tabular Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info102.html">
+    <a class="dropdown-item" href="./tracks/info/info102.html">
  <span class="dropdown-text">INFO102: Research Compendium</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info103.html">
+    <a class="dropdown-item" href="./tracks/info/info103.html">
  <span class="dropdown-text">INFO103: Data Repositories</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info104.html">
+    <a class="dropdown-item" href="./tracks/info/info104.html">
  <span class="dropdown-text">INFO104: Spatial Data I</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info201.html">
+    <a class="dropdown-item" href="./tracks/info/info201.html">
  <span class="dropdown-text">INFO201: Spatial Data II</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/info/info202.html">
+    <a class="dropdown-item" href="./tracks/info/info202.html">
  <span class="dropdown-text">INFO202: Relational Databases</span></a>
   </li>  
     </ul>
@@ -187,27 +221,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-comm">    
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm101.html">
+    <a class="dropdown-item" href="./tracks/comm/comm101.html">
  <span class="dropdown-text">COMM101: Data Visualization with ggplot</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm102.html">
+    <a class="dropdown-item" href="./tracks/comm/comm102.html">
  <span class="dropdown-text">COMM102: Literate Programming with Quarto</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm103.html">
+    <a class="dropdown-item" href="./tracks/comm/comm103.html">
  <span class="dropdown-text">COMM103: Presenting Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm104.html">
+    <a class="dropdown-item" href="./tracks/comm/comm104.html">
  <span class="dropdown-text">COMM104: Documenting Code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm201.html">
+    <a class="dropdown-item" href="./tracks/comm/comm201.html">
  <span class="dropdown-text">COMM201: Enhancing Visualizations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tracks/comm/comm202.html">
+    <a class="dropdown-item" href="./tracks/comm/comm202.html">
  <span class="dropdown-text">COMM202: Interactive Visualizations with Shiny</span></a>
   </li>  
     </ul>
@@ -218,11 +252,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
         <li>
-    <a class="dropdown-item" href="../../module-submission.html">
- <span class="dropdown-text">Module Submission Instructions</span></a>
+    <a class="dropdown-item" href="./module-submission.html">
+ <span class="dropdown-text">Module submission instructions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../course-setup.html">
+    <a class="dropdown-item" href="./course-setup.html">
  <span class="dropdown-text">Course Setup Instructions</span></a>
   </li>  
     </ul>
@@ -238,15 +272,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link active" data-scroll-target="#r-and-rstudio">R and RStudio</a></li>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#git-on-windows" id="toc-git-on-windows" class="nav-link" data-scroll-target="#git-on-windows">Git on Windows</a></li>
+  <li><a href="#git-on-mac" id="toc-git-on-mac" class="nav-link" data-scroll-target="#git-on-mac">Git on Mac</a></li>
+  <li><a href="#github-account" id="toc-github-account" class="nav-link" data-scroll-target="#github-account">GitHub account</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PRST103: Hypothesis testing</h1>
+<h1 class="title">Course Setup Instructions</h1>
 </div>
 
 
@@ -263,10 +309,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This document will guide you to set up your computer for this course.</p>
+<section id="r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="r-and-rstudio">R and RStudio</h2>
+<p>R is the programming language we’ll be using and RStudio is the interactive development environment we’ll use for writing and running code.</p>
+<p>Go to the <a href="https://posit.co/download/rstudio-desktop/">RStudio installation page</a> and install R first, then RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Install the course companion package. Open RStudio and run the following commands in the Console pane:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.package</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"MarineCS-100B/marinecs100b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
+<p>Git is a version control system for keeping track of files and GitHub is an online hosting service for Git repositories. They’re important tools for data scientists and you’ll use them for submitting modules this quarter.</p>
+<section id="git-on-windows" class="level3">
+<h3 class="anchored" data-anchor-id="git-on-windows">Git on Windows</h3>
+<p>Install <a href="https://gitforwindows.org/">Git for Windows</a>.</p>
+</section>
+<section id="git-on-mac" class="level3">
+<h3 class="anchored" data-anchor-id="git-on-mac">Git on Mac</h3>
+<p>Install the Xcode Command Line Tools (which include Git). Open <strong>Terminal</strong> and run this command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="github-account" class="level3">
+<h3 class="anchored" data-anchor-id="github-account">GitHub account</h3>
+<p>While Git is installing, go to <a href="https://github.com/">GitHub</a> and create an account. Then install <a href="https://desktop.github.com/download/">GitHub Desktop</a>.</p>
 
 
+</section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>If you’re on a Mac, make sure you drag the application to your Application folder and eject the DMG. Don’t run RStudio directly from the DMG. Raise your hand if you have questions about this part!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

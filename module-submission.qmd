@@ -1,5 +1,5 @@
 ---
-title: "Module submission instructions"
+title: "Module Submission Instructions"
 bibliography: references.bib
 ---
 

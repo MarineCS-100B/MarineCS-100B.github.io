@@ -1,0 +1,15 @@
+{
+  "hash": "a5e3d4354961b9d157c4fd2f269b7db1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Intro to Marine Data Science\"\nsubtitle: \"CCS Marine Science\"\ndescription: \"Winter 2025\"\ntitle-block-banner: false\ntoc: false\n---\n\n\n\n## Course description\n\nData science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n### Some concepts we'll cover:\n\n-   Computational thinking and writing code (**Programming**)\n\n-   Describing and simulating data (**Probability and statistics**)\n\n-   Organizing, sharing, and finding data (**Informatics**)\n\n-   Communicating your results and data science workflow (**Communication**)\n\n### Course format\n\n*Intro to Marine Data Science* is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That's hard to do in traditional class formats because you're all entering this class with diverse experiences, interests, and goals.\n\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you'll apply the skills from that lesson to real-world questions, like:\n\n-   Where are the world's oceans warming the fastest?\n\n-   Are deep-sea fish and invertebrates important prey for marine predators?\n\n-   How can we fill in the at-sea data collection gaps caused by Covid?\n\n## Teaching Team\n\n::::::::: grid\n::::: {.g-col-12 .g-col-md-6}\n::: {.center-text .body-text-l}\n**Instructor**\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](images/MFC headshot.png){fig-align='center' width=45%}\n:::\n:::\n\n\n\n::: center-text\n[**Max Czapanskiy**]{.teal-text}\\\n**Email:** [maxczap\\@ucsb.edu](mailto::maxczap@ucsb.edu)\n:::\n:::::\n\n::::: {.g-col-12 .g-col-md-6}\n::: {.center-text .body-text-l}\n**Learning Assistant**\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](images/MFC headshot.png){fig-align='center' width=45%}\n:::\n:::\n\n\n\n::: center-text\n[**Hayden Vega**]{.teal-text}\\\n**Email:** [haydenvega\\@umail.ucsb.edu](mailto::haydenvega@umail.ucsb.edu)\n:::\n:::::\n:::::::::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

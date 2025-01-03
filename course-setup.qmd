@@ -1,0 +1,40 @@
+---
+title: "Course Setup Instructions"
+---
+
+This document will guide you to set up your computer for this course.
+
+## R and RStudio
+
+R is the programming language we'll be using and RStudio is the interactive development environment we'll use for writing and running code.
+
+Go to the [RStudio installation page](https://posit.co/download/rstudio-desktop/) and install R first, then RStudio[^1].
+
+[^1]: If you're on a Mac, make sure you drag the application to your Application folder and eject the DMG. Don't run RStudio directly from the DMG. Raise your hand if you have questions about this part!
+
+Install the course companion package. Open RStudio and run the following commands in the Console pane:
+
+``` r
+install.package("remotes")
+remotes::install_github("MarineCS-100B/marinecs100b")
+```
+
+## Git and GitHub
+
+Git is a version control system for keeping track of files and GitHub is an online hosting service for Git repositories. They're important tools for data scientists and you'll use them for submitting modules this quarter.
+
+### Git on Windows
+
+Install [Git for Windows](https://gitforwindows.org/).
+
+### Git on Mac
+
+Install the Xcode Command Line Tools (which include Git). Open **Terminal** and run this command:
+
+``` sh
+xcode-select --install
+```
+
+### GitHub account
+
+While Git is installing, go to [GitHub](https://github.com/) and create an account. Then install [GitHub Desktop](https://desktop.github.com/download/).

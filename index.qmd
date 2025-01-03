@@ -24,7 +24,7 @@ Data science merges computer science and statistics with a particular field of s
 
 *Intro to Marine Data Science* is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That's hard to do in traditional class formats because you're all entering this class with diverse experiences, interests, and goals.
 
-This class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that excite you and work through them with a partner. Each lesson has readings, recorded lectures, and exercises for you to complete before class. In class, you'll apply the skills from that lesson to real-world questions, like:
+This class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you'll apply the skills from that lesson to real-world questions, like:
 
 -   Where are the world's oceans warming the fastest?
 

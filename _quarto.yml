@@ -41,6 +41,7 @@ website:
       - text: "More"
         menu:
           - module-submission.qmd
+          - course-setup.qmd
 
 execute:
   freeze: auto
