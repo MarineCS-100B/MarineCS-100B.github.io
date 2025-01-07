@@ -1,15 +1,15 @@
 ---
-title: "Module Submission Instructions"
+title: "Module Setup and Submission"
 bibliography: references.bib
 ---
 
 ## Overview
 
-We're using Git and GitHub for submitting modules. Git is a *version control system* for tracking changes you make to files. GitHub is a *hosting service* for distributing Git repositories. These tools are essential for collaborative coding projects and it's important to your development as a data scientist that you learn how to use them.
+We're using Git and GitHub for setting up and submitting modules. Git is a *version control system* for tracking changes you make to files. GitHub is a *hosting service* for distributing Git repositories. These tools are essential for collaborative coding projects and it's important to your development as a data scientist that you learn how to use them.
 
 That said, Git and GitHub have a difficult learning curve. In this course, we're going to limit ourselves to using some basic features. In future courses or when you're doing research in a lab, you'll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading @bryan2018.
 
-In brief, module submission has five steps. You'll do the first two to set up your computer for the module, then you'll do the last three when you're ready to submit.
+In brief, module setup has two steps and submission has three.
 
 1.  Create your own *remote* repo on GitHub from the module template repo.
 
@@ -33,9 +33,11 @@ Now your computer is set up for the module. Complete the activity according to t
 </div>
 ```
 
-More detailed instructions below.
+::: callout-important
+There's a decent chance these instructions feel overwhelming. It's true, there's a lot to learn even to set up and submit your modules - certainly trickier than uploading a PDF to Canvas. I encourage you to stick with it! After you set up and submit a couple modules you'll feel a lot more confident, and by the end of the quarter you'll have gained valuable experience with an important data science tool.
+:::
 
-## Pre-module setup
+## Module setup
 
 ### Step 1: Create your *remote*
 
@@ -51,7 +53,7 @@ Copy your remote repo's URL (**A**) then switch over to RStudio and create a new
 
 At this point you're ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub.
 
-## Post-module submission
+## Module submission
 
 We'll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.
 

@@ -64,7 +64,7 @@ knitr::include_graphics("images/MFC headshot.png")
 #| echo: false
 #| fig-align: "center"
 #| out-width: "45%" 
-knitr::include_graphics("images/MFC headshot.png")
+knitr::include_graphics("images/HV headshot.png")
 ```
 
 ::: center-text

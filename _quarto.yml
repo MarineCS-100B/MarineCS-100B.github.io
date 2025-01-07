@@ -40,8 +40,10 @@ website:
           - tracks/comm/comm202.qmd
       - text: "More"
         menu:
-          - module-submission.qmd
+          - modules.qmd
           - course-setup.qmd
+          - text: Syllabus
+            href: https://docs.google.com/document/d/10pUhmBvsWVQyDpV4DIBtkWVghk3rkZAv9Z7wRfSitKs/edit?usp=sharing
 
 execute:
   freeze: auto

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Marine Data Science – Module Submission Instructions</title>
+<title>Intro to Marine Data Science – Module Setup and Submission</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -238,12 +238,16 @@ div.csl-indent {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
         <li>
-    <a class="dropdown-item" href="./module-submission.html">
- <span class="dropdown-text">Module Submission Instructions</span></a>
+    <a class="dropdown-item" href="./modules.html">
+ <span class="dropdown-text">Module Setup and Submission</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./course-setup.html">
  <span class="dropdown-text">Course Setup Instructions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/document/d/10pUhmBvsWVQyDpV4DIBtkWVghk3rkZAv9Z7wRfSitKs/edit?usp=sharing">
+ <span class="dropdown-text">Syllabus</span></a>
   </li>  
     </ul>
   </li>
@@ -264,12 +268,12 @@ div.csl-indent {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#pre-module-setup" id="toc-pre-module-setup" class="nav-link" data-scroll-target="#pre-module-setup">Pre-module setup</a>
+  <li><a href="#module-setup" id="toc-module-setup" class="nav-link" data-scroll-target="#module-setup">Module setup</a>
   <ul class="collapse">
   <li><a href="#step-1-create-your-remote" id="toc-step-1-create-your-remote" class="nav-link" data-scroll-target="#step-1-create-your-remote">Step 1: Create your <em>remote</em></a></li>
   <li><a href="#step-2-clone-your-local-repo" id="toc-step-2-clone-your-local-repo" class="nav-link" data-scroll-target="#step-2-clone-your-local-repo">Step 2: Clone your <em>local</em> repo</a></li>
   </ul></li>
-  <li><a href="#post-module-submission" id="toc-post-module-submission" class="nav-link" data-scroll-target="#post-module-submission">Post-module submission</a>
+  <li><a href="#module-submission" id="toc-module-submission" class="nav-link" data-scroll-target="#module-submission">Module submission</a>
   <ul class="collapse">
   <li><a href="#step-3-commit-your-changes" id="toc-step-3-commit-your-changes" class="nav-link" data-scroll-target="#step-3-commit-your-changes">Step 3: <em>Commit</em> your changes</a></li>
   <li><a href="#step-4-push-your-commits" id="toc-step-4-push-your-commits" class="nav-link" data-scroll-target="#step-4-push-your-commits">Step 4: <em>Push</em> your commits</a></li>
@@ -283,7 +287,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Module Submission Instructions</h1>
+<h1 class="title">Module Setup and Submission</h1>
 </div>
 
 
@@ -302,9 +306,9 @@ div.csl-indent {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>We’re using Git and GitHub for submitting modules. Git is a <em>version control system</em> for tracking changes you make to files. GitHub is a <em>hosting service</em> for distributing Git repositories. These tools are essential for collaborative coding projects and it’s important to your development as a data scientist that you learn how to use them.</p>
+<p>We’re using Git and GitHub for setting up and submitting modules. Git is a <em>version control system</em> for tracking changes you make to files. GitHub is a <em>hosting service</em> for distributing Git repositories. These tools are essential for collaborative coding projects and it’s important to your development as a data scientist that you learn how to use them.</p>
 <p>That said, Git and GitHub have a difficult learning curve. In this course, we’re going to limit ourselves to using some basic features. In future courses or when you’re doing research in a lab, you’ll have opportunities to learn more advanced Git and GitHub workflows. For more information about how data scientists use Git and GitHub, I recommend reading <span class="citation" data-cites="bryan2018">Bryan (<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span>.</p>
-<p>In brief, module submission has five steps. You’ll do the first two to set up your computer for the module, then you’ll do the last three when you’re ready to submit.</p>
+<p>In brief, module setup has two steps and submission has three.</p>
 <ol type="1">
 <li><p>Create your own <em>remote</em> repo on GitHub from the module template repo.</p></li>
 <li><p>Create your <em>local</em> repo by cloning your remote to your computer.</p></li>
@@ -321,10 +325,22 @@ div.csl-indent {
   <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://www.canva.com/design/DAGa_YYm_t8/BtqXQ9xPu28GuPZL6Sg8QQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<p>More detailed instructions below.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There’s a decent chance these instructions feel overwhelming. It’s true, there’s a lot to learn even to set up and submit your modules - certainly trickier than uploading a PDF to Canvas. I encourage you to stick with it! After you set up and submit a couple modules you’ll feel a lot more confident, and by the end of the quarter you’ll have gained valuable experience with an important data science tool.</p>
+</div>
+</div>
 </section>
-<section id="pre-module-setup" class="level2">
-<h2 class="anchored" data-anchor-id="pre-module-setup">Pre-module setup</h2>
+<section id="module-setup" class="level2">
+<h2 class="anchored" data-anchor-id="module-setup">Module setup</h2>
 <section id="step-1-create-your-remote" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-create-your-remote">Step 1: Create your <em>remote</em></h3>
 <p>Navigate to the template repo on GitHub. Click on <strong>Use this template &gt; Create a new repository</strong>.</p>
@@ -337,8 +353,8 @@ div.csl-indent {
 <p>At this point you’re ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub.</p>
 </section>
 </section>
-<section id="post-module-submission" class="level2">
-<h2 class="anchored" data-anchor-id="post-module-submission">Post-module submission</h2>
+<section id="module-submission" class="level2">
+<h2 class="anchored" data-anchor-id="module-submission">Module submission</h2>
 <p>We’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.</p>
 <p><img src="images/submission-instructions/3-add-github.gif" class="img-fluid" alt="A screen recording of adding a local repository to GitHub Desktop."></p>
 <section id="step-3-commit-your-changes" class="level3">

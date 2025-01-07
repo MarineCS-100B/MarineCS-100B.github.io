@@ -15,13 +15,29 @@ This is the first module of the **Programming** track. By the end of this module
 
 ## Pre-class preparation
 
-| {{< fa film title="A roll of film" >}} Lecture | {{< fa clipboard title="A clipboard" >}} Notes | {{< fa dumbbell title="A dumbbell" >}} Exercises |
-|----|----|----|
-| Introduction to R and RStudio |  |  |
-| Expressions and variables in R |  |  |
-| Using functions |  |  |
-| Basic vectors |  |  |
-| Working with multiple vectors |  |  |
+Set up the PROG101 module on your computer (see [Module Setup and Submission](../../../modules.qmd)). There you'll find the guided notes and exercises to accompany these recorded lectures.
+
+### {{< fa film title="A roll of film" >}} Lectures
+
+#### Introduction to R and RStudio
+
+{{< video https://vimeo.com/1044553780 >}}
+
+#### Expressions and variables
+
+{{< video https://vimeo.com/1044554417 >}}
+
+#### Using functions
+
+{{< video https://vimeo.com/1044555025 >}}
+
+#### Basic vectors
+
+{{< video https://vimeo.com/1044555620 >}}
+
+#### Working with multiple vectors
+
+{{< video https://vimeo.com/1044556087 >}}
 
 ## In-class activity
 
