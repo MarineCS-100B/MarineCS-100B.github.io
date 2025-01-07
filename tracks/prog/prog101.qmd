@@ -15,7 +15,7 @@ This is the first module of the **Programming** track. By the end of this module
 
 ## Pre-class preparation
 
-Set up the PROG101 module on your computer (see [Module Setup and Submission](../../../modules.qmd)). There you'll find the guided notes and exercises to accompany these recorded lectures.
+Set up the [PROG101 module](https://github.com/MarineCS-100B/prog101) on your computer (see [Module Setup and Submission](../../../modules.html)). There you'll find the guided notes and exercises to accompany these recorded lectures.
 
 ### {{< fa film title="A roll of film" >}} Lectures
 
