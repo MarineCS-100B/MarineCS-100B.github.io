@@ -60,7 +60,7 @@
     "href": "course-setup.html#r-and-rstudio",
     "title": "Course Setup Instructions",
     "section": "R and RStudio",
-    "text": "R and RStudio\nR is the programming language we’ll be using and RStudio is the interactive development environment we’ll use for writing and running code.\nGo to the RStudio installation page and install R first, then RStudio1.\nInstall the course companion package. Open RStudio and run the following commands in the Console pane:\ninstall.package(\"remotes\")\nremotes::install_github(\"MarineCS-100B/marinecs100b\")"
+    "text": "R and RStudio\nR is the programming language we’ll be using and RStudio is the interactive development environment we’ll use for writing and running code.\nGo to the RStudio installation page and install R first, then RStudio1.\nInstall the course companion package. Open RStudio and run the following commands in the Console pane:\ninstall.packages(\"remotes\")\nremotes::install_github(\"MarineCS-100B/marinecs100b\")"
   },
   {
     "objectID": "course-setup.html#git-and-github",

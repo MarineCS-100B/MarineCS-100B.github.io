@@ -15,7 +15,7 @@ Go to the [RStudio installation page](https://posit.co/download/rstudio-desktop/
 Install the course companion package. Open RStudio and run the following commands in the Console pane:
 
 ``` r
-install.package("remotes")
+install.packages("remotes")
 remotes::install_github("MarineCS-100B/marinecs100b")
 ```
 
