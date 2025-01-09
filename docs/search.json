@@ -18,14 +18,14 @@
     "href": "modules.html#module-setup",
     "title": "Module Setup and Submission",
     "section": "Module setup",
-    "text": "Module setup\n\nStep 1: Create your remote\nNavigate to the template repo on GitHub. Click on Use this template &gt; Create a new repository.\n\n\n\nStep 2: Clone your local repo\nCopy your remote repo’s URL (A) then switch over to RStudio and create a new RStudio project (B). In the New Project Wizard, choose Version Control &gt; Git then paste your URL and choose the local directory where you want to keep your local repositories (C-E). After clicking Create Project, RStudio will relaunch; you should see the project name updated in the top right and the Files pane should show the files from the template repo (F).\n\nAt this point you’re ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub."
+    "text": "Module setup\n\nStep 1: Create your remote\nNavigate to the template repo on GitHub. Click on Use this template &gt; Create a new repository.\n\nFill out the “Create a new repository” form. The only field you need to fill out is “Repository name”. Make it match the module repository name (e.g., prog101). Click on the green “Create repository” button. Once GitHub creates the repo, you should see a URL that looks like “github.com/[your username]/[module name]”.\n\n\nStep 2: Clone your local repo\nCopy your remote repo’s URL (A) then switch over to RStudio and create a new RStudio project (B). In the New Project Wizard, choose Version Control &gt; Git then paste your URL and choose the local directory where you want to keep your local repositories (C-E). After clicking Create Project, RStudio will relaunch; you should see the project name updated in the top right and the Files pane should show the files from the template repo (F).\n\nAt this point you’re ready to work on the module. You have a local Git repository on your machine that is connected to your remote repository on GitHub."
   },
   {
     "objectID": "modules.html#module-submission",
     "href": "modules.html#module-submission",
     "title": "Module Setup and Submission",
     "section": "Module submission",
-    "text": "Module submission\nWe’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.\n\n\nStep 3: Commit your changes\nAfter you complete the module it’s time to commit your changes. This updates your local repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue Commit to main button.\n\n\n\nStep 4: Push your commits\nAfter committing, you should no longer see any changed files. Click the Push origin button (A). This updates your remote repo on GitHub, which you can see online (B).\n\n\n\nStep 5: Open an Issue\nClick the Issues tab on GitHub (in the browser) and create a new Issue. Mention me (@FlukeAndFeather) in the Issue, which will let me know you’ve submitted your module. Congrats! You’re done!"
+    "text": "Module submission\nWe’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.\n\n\nStep 3: Commit your changes\nAfter you complete the module it’s time to commit your changes. This updates your local repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue Commit to main button.\n\n\n\nStep 4: Push your commits\nAfter committing, you should no longer see any changed files. Click the Push origin button (A). This updates your remote repo on GitHub, which you can see online (B).\n\n\n\nStep 5: Open an Issue\nClick the Issues tab on GitHub (in the browser) and create a new Issue. Mention me (@FlukeAndFeather) in the Issue, which will let me know you’ve submitted your module. If you’re submitting the in-class portion for your pair, mention them as well. Congrats! You’re done!"
   },
   {
     "objectID": "index.html",
@@ -110,5 +110,26 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "pair-programming.html",
+    "href": "pair-programming.html",
+    "title": "Pair Programming",
+    "section": "",
+    "text": "We’re using pair programming for the in-class parts of modules. As the name suggests, pair programming is when two programmers write code together. Research shows that pair programming leads to better quality code in less time, so it’s popular in some software development circles. More importantly for you, it’s also been demonstrated that pair programming is an excellent learning tool (Hanks et al. 2011). There are lots of reasons pair programming helps learning. For example:"
+  },
+  {
+    "objectID": "pair-programming.html#pair-programming-in-practice",
+    "href": "pair-programming.html#pair-programming-in-practice",
+    "title": "Pair Programming",
+    "section": "Pair programming in practice",
+    "text": "Pair programming in practice\nHere’s how we’ll use pair programming this quarter. Keep in mind: this is only for the in-class portion. The pre-class preparation (videos, notes, exercises) should be done individually.\n\nChoose a partner\nEach week you’ll form a pair with another student. There will be a question about who you’re working with on the end-of-week survey.\nHere are some important things to consider in choosing a partner:\n\nFind someone interested in similar modules as you are - you’ll be working on the same tasks together.\nPair programming works best when both partners have relatively similar experience levels with programming. I emphasize relative because no two of you are exactly the same. Slight differences are to be expected! However, a situation where one partner has substantial experience and the other is brand new will probably not work as well.\nI strongly encourage you to change partners every week! That may not always be possible based on module interest and experience level. However, when you can work with someone new please take that opportunity. Your learning will benefit from interacting the diversity of perspectives and experiences in the class.\n\n\n\nStart programming\n\nPut one laptop away. You’re both going to be working at one keyboard in one repository.\nChoose roles. One partner will be the driver and the other will be the navigator.\n\nThe driver’s primary responsibility is to type - you’ll be the one at the keyboard and focused on the in-the-weeds tasks.\nThe navigator’s primary responsibility is to talk - you’ll be guiding the conversation and staying focused on the big picture as the driver types.\nPrimary is emphasized because the line between the roles is fuzzy. The driver should be thinking critically and considering the whole of the problem. The navigator should be watching what the driver types and helping to find typos and other errors.\n\nSwitch roles every 20 minutes.\n\n\n\nSubmit the module\nBecause you’re both working at the same laptop, your repositories won’t match. Both of you should still submit your repositories on GitHub because I want to see both of your pre-class notes and exercises. Whichever partner’s repository contains the in-class part of the module should mention their partner in the issue they open to submit the repo."
+  },
+  {
+    "objectID": "pair-programming.html#suggestions-for-effective-pair-programming",
+    "href": "pair-programming.html#suggestions-for-effective-pair-programming",
+    "title": "Pair Programming",
+    "section": "Suggestions for effective pair programming",
+    "text": "Suggestions for effective pair programming\n\nHave each others’ backs. You’re in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.\nBe patient. When you’re new to coding, describing your ideas is really challenging. It’s natural to get frustrated when your partner doesn’t understand what you’re trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!\nTake breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect."
   }
 ]

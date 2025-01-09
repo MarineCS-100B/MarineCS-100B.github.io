@@ -1,0 +1,47 @@
+---
+title: "Pair Programming"
+bibliography: references.bib
+---
+
+We're using *pair programming* for the in-class parts of modules. As the name suggests, pair programming is when two programmers write code together. Research shows that pair programming leads to better quality code in less time, so it's popular in some software development circles. More importantly for you, it's also been demonstrated that pair programming is an excellent learning tool [@hanks2011]. There are lots of reasons pair programming helps learning. For example:
+
+-   Talking through ideas, challenges, and solutions helps students understand concepts more deeply.
+
+-   Peer interactions create a more social and collaborative environment, which reinforces motivation and a sense of belonging.
+
+## Pair programming in practice
+
+Here's how we'll use pair programming this quarter. Keep in mind: this is only for the in-class portion. The pre-class preparation (videos, notes, exercises) should be done individually.
+
+### Choose a partner
+
+Each week you'll form a pair with another student. There will be a question about who you're working with on the end-of-week survey.
+
+Here are some important things to consider in choosing a partner:
+
+-   Find someone interested in similar modules as you are - you'll be working on the same tasks together.
+
+-   Pair programming works best when both partners have *relatively* similar experience levels with programming. I emphasize relative because no two of you are exactly the same. Slight differences are to be expected! However, a situation where one partner has substantial experience and the other is brand new will probably not work as well.
+
+-   I strongly encourage you to change partners every week! That may not always be possible based on module interest and experience level. However, when you can work with someone new please take that opportunity. Your learning will benefit from interacting the diversity of perspectives and experiences in the class.
+
+### Start programming
+
+1.  Put one laptop away. You're both going to be working at one keyboard in one repository.
+2.  Choose roles. One partner will be the **driver** and the other will be the **navigator**.
+    1.  The driver's *primary* responsibility is to type - you'll be the one at the keyboard and focused on the in-the-weeds tasks.
+    2.  The navigator's *primary* responsibility is to talk - you'll be guiding the conversation and staying focused on the big picture as the driver types.
+    3.  *Primary* is emphasized because the line between the roles is fuzzy. The driver should be thinking critically and considering the whole of the problem. The navigator should be watching what the driver types and helping to find typos and other errors.
+3.  Switch roles every 20 minutes.
+
+### Submit the module
+
+Because you're both working at the same laptop, your repositories won't match. Both of you should still submit your repositories on GitHub because I want to see both of your pre-class notes and exercises. Whichever partner's repository contains the in-class part of the module should mention their partner in the issue they open to submit the repo.
+
+## Suggestions for effective pair programming
+
+-   Have each others' backs. You're in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.
+
+-   Be patient. When you're new to coding, describing your ideas is *really challenging*. It's natural to get frustrated when your partner doesn't understand what you're trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!
+
+-   Take breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect.

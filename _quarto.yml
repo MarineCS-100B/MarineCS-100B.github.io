@@ -42,6 +42,7 @@ website:
         menu:
           - modules.qmd
           - course-setup.qmd
+          - pair-programming.qmd
           - text: Syllabus
             href: https://docs.google.com/document/d/10pUhmBvsWVQyDpV4DIBtkWVghk3rkZAv9Z7wRfSitKs/edit?usp=sharing
 

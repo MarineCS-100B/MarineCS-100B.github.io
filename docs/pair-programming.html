@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Winter 2025">
 
-<title>Intro to Marine Data Science</title>
+<title>Intro to Marine Data Science – Pair Programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -247,21 +266,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pair-programming-in-practice" id="toc-pair-programming-in-practice" class="nav-link active" data-scroll-target="#pair-programming-in-practice">Pair programming in practice</a>
+  <ul class="collapse">
+  <li><a href="#choose-a-partner" id="toc-choose-a-partner" class="nav-link" data-scroll-target="#choose-a-partner">Choose a partner</a></li>
+  <li><a href="#start-programming" id="toc-start-programming" class="nav-link" data-scroll-target="#start-programming">Start programming</a></li>
+  <li><a href="#submit-the-module" id="toc-submit-the-module" class="nav-link" data-scroll-target="#submit-the-module">Submit the module</a></li>
+  </ul></li>
+  <li><a href="#suggestions-for-effective-pair-programming" id="toc-suggestions-for-effective-pair-programming" class="nav-link" data-scroll-target="#suggestions-for-effective-pair-programming">Suggestions for effective pair programming</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Intro to Marine Data Science</h1>
-<p class="subtitle lead">CCS Marine Science</p>
+<h1 class="title">Pair Programming</h1>
 </div>
 
-<div>
-  <div class="description">
-    Winter 2025
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -276,74 +303,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course description</h2>
-<p>Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.</p>
-<section id="some-concepts-well-cover" class="level3">
-<h3 class="anchored" data-anchor-id="some-concepts-well-cover">Some concepts we’ll cover:</h3>
+<p>We’re using <em>pair programming</em> for the in-class parts of modules. As the name suggests, pair programming is when two programmers write code together. Research shows that pair programming leads to better quality code in less time, so it’s popular in some software development circles. More importantly for you, it’s also been demonstrated that pair programming is an excellent learning tool <span class="citation" data-cites="hanks2011">(<a href="#ref-hanks2011" role="doc-biblioref">Hanks et al. 2011</a>)</span>. There are lots of reasons pair programming helps learning. For example:</p>
 <ul>
-<li><p>Computational thinking and writing code (<strong>Programming</strong>)</p></li>
-<li><p>Describing and simulating data (<strong>Probability and statistics</strong>)</p></li>
-<li><p>Organizing, sharing, and finding data (<strong>Informatics</strong>)</p></li>
-<li><p>Communicating your results and data science workflow (<strong>Communication</strong>)</p></li>
+<li><p>Talking through ideas, challenges, and solutions helps students understand concepts more deeply.</p></li>
+<li><p>Peer interactions create a more social and collaborative environment, which reinforces motivation and a sense of belonging.</p></li>
+</ul>
+<section id="pair-programming-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="pair-programming-in-practice">Pair programming in practice</h2>
+<p>Here’s how we’ll use pair programming this quarter. Keep in mind: this is only for the in-class portion. The pre-class preparation (videos, notes, exercises) should be done individually.</p>
+<section id="choose-a-partner" class="level3">
+<h3 class="anchored" data-anchor-id="choose-a-partner">Choose a partner</h3>
+<p>Each week you’ll form a pair with another student. There will be a question about who you’re working with on the end-of-week survey.</p>
+<p>Here are some important things to consider in choosing a partner:</p>
+<ul>
+<li><p>Find someone interested in similar modules as you are - you’ll be working on the same tasks together.</p></li>
+<li><p>Pair programming works best when both partners have <em>relatively</em> similar experience levels with programming. I emphasize relative because no two of you are exactly the same. Slight differences are to be expected! However, a situation where one partner has substantial experience and the other is brand new will probably not work as well.</p></li>
+<li><p>I strongly encourage you to change partners every week! That may not always be possible based on module interest and experience level. However, when you can work with someone new please take that opportunity. Your learning will benefit from interacting the diversity of perspectives and experiences in the class.</p></li>
 </ul>
 </section>
-<section id="course-format" class="level3">
-<h3 class="anchored" data-anchor-id="course-format">Course format</h3>
-<p><em>Intro to Marine Data Science</em> is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.</p>
-<p>This class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:</p>
+<section id="start-programming" class="level3">
+<h3 class="anchored" data-anchor-id="start-programming">Start programming</h3>
+<ol type="1">
+<li>Put one laptop away. You’re both going to be working at one keyboard in one repository.</li>
+<li>Choose roles. One partner will be the <strong>driver</strong> and the other will be the <strong>navigator</strong>.
+<ol type="1">
+<li>The driver’s <em>primary</em> responsibility is to type - you’ll be the one at the keyboard and focused on the in-the-weeds tasks.</li>
+<li>The navigator’s <em>primary</em> responsibility is to talk - you’ll be guiding the conversation and staying focused on the big picture as the driver types.</li>
+<li><em>Primary</em> is emphasized because the line between the roles is fuzzy. The driver should be thinking critically and considering the whole of the problem. The navigator should be watching what the driver types and helping to find typos and other errors.</li>
+</ol></li>
+<li>Switch roles every 20 minutes.</li>
+</ol>
+</section>
+<section id="submit-the-module" class="level3">
+<h3 class="anchored" data-anchor-id="submit-the-module">Submit the module</h3>
+<p>Because you’re both working at the same laptop, your repositories won’t match. Both of you should still submit your repositories on GitHub because I want to see both of your pre-class notes and exercises. Whichever partner’s repository contains the in-class part of the module should mention their partner in the issue they open to submit the repo.</p>
+</section>
+</section>
+<section id="suggestions-for-effective-pair-programming" class="level2">
+<h2 class="anchored" data-anchor-id="suggestions-for-effective-pair-programming">Suggestions for effective pair programming</h2>
 <ul>
-<li><p>Where are the world’s oceans warming the fastest?</p></li>
-<li><p>Are deep-sea fish and invertebrates important prey for marine predators?</p></li>
-<li><p>How can we fill in the at-sea data collection gaps caused by Covid?</p></li>
+<li><p>Have each others’ backs. You’re in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.</p></li>
+<li><p>Be patient. When you’re new to coding, describing your ideas is <em>really challenging</em>. It’s natural to get frustrated when your partner doesn’t understand what you’re trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!</p></li>
+<li><p>Take breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect.</p></li>
 </ul>
-</section>
-</section>
-<section id="teaching-team" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-team">Teaching Team</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="center-text body-text-l">
-<p><strong>Instructor</strong></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/MFC headshot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="center-text">
-<p><span class="teal-text"><strong>Max Czapanskiy</strong></span><br>
-<strong>Email:</strong> <a href="mailto::maxczap@ucsb.edu">maxczap@ucsb.edu</a></p>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="center-text body-text-l">
-<p><strong>Learning Assistant</strong></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/HV headshot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="center-text">
-<p><span class="teal-text"><strong>Hayden Vega</strong></span><br>
-<strong>Email:</strong> <a href="mailto::haydenvega@umail.ucsb.edu">haydenvega@umail.ucsb.edu</a></p>
-</div>
-</div>
-</div>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-hanks2011" class="csl-entry" role="listitem">
+Hanks, Brian, Sue Fitzgerald, Renée McCauley, Laurie Murphy, and Carol Zander. 2011. <span>“Pair Programming in Education: A Literature Review.”</span> <em>Computer Science Education</em> 21 (2): 135–73. <a href="https://doi.org/10.1080/08993408.2011.579808">https://doi.org/10.1080/08993408.2011.579808</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
