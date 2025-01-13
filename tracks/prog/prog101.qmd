@@ -81,7 +81,7 @@ Now, fill in the blanks below to get the most common sampling interval. Add comm
 #| label: samp-intervals
 
 ???_datetime <- kefj_datetime[kefj_site == ???]
-???_interval <- ???_datetime[-1] - ???_datetime[-???]
+???_interval <- ???_datetime[???:???] - ???_datetime[???:???]
 t???e(???)
 
 ```
@@ -96,6 +96,23 @@ Look how big the `kefj_*` vectors are. That's way too big to tackle all at once!
 
 ::: callout-tip
 Check out `which.min()` and `which.max()`
+:::
+
+::: callout-important
+This code chunk introduces two new things in R.
+
+`as.POSIXct()` is a function for creating vectors that R recognizes as dates and times. For example, to create a variable representing noon on January 1, 2025 you could write `jan1_2025 <- as.POSIXct("2025-01-1 12:00")`. The `tz` argument specifies the **t**ime**z**one. `"Etc/GMT+8"` is the timezone the `kefj` data were collected in.
+
+`&` represents "and". It's how you combine multiple conditions that have to be true. For example, let's say I have four people of different ages represented by these vectors:
+
+``` r
+people <- c("Alice", "Bob", "Carla", "Danielle")
+ages <- c(19, 16, 22, 29)
+```
+
+Then I can find which people are older than 20 *and* younger than 25 like this:
+
+`people[ages > 20 & ages < 25]`
 :::
 
 ```{r}
@@ -124,13 +141,15 @@ Examine your visualizations. What patterns do you notice in time, temperature, a
 
 Now that you've visualized the extreme temperatures you're ready to begin calculating extreme temperature exposure. Re-read section 2.1 of Traiger et al. How did they define extreme heat exposure? Translate their written description to code and calculate the extreme heat exposure for the hottest day. Compare your answer to the visualization you made. Does it look right to you? Repeat this process for extreme cold exposure on the coldest day.
 
-### Putting it together
+### Putting it back together (optional)
+
+You'll see more about problem decomposition in PROG103. If you'd like a preview, try the following.
 
 Let's go from analyzing a single day to a whole season. Re-read how Traiger et al. quantified extreme hot and cold air temperature exposures at the seasonal scale. Make a sketch of how you would do that for a single site and season.
 
 Pick one site and one season. What were the extreme heat and cold exposure at that site in that season? Repeat for a different site and a different season.
 
-Optional extension: Traiger et al. also calculated water temperature anomalies. Consider how you could do that. Make a sketch showing which vectors you would need and how you would use them. Write code to get the temperature anomalies for one site in one season in one year.
+Traiger et al. also calculated water temperature anomalies. Consider how you could do that. Make a sketch showing which vectors you would need and how you would use them. Write code to get the temperature anomalies for one site in one season in one year.
 
 ## Recap and next steps
 

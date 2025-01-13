@@ -282,6 +282,10 @@ div.csl-indent {
  <span class="dropdown-text">Course Setup Instructions</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../pair-programming.html">
+ <span class="dropdown-text">Pair Programming</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://docs.google.com/document/d/10pUhmBvsWVQyDpV4DIBtkWVghk3rkZAv9Z7wRfSitKs/edit?usp=sharing">
  <span class="dropdown-text">Syllabus</span></a>
   </li>  
@@ -313,7 +317,7 @@ div.csl-indent {
   <li><a href="#guiding-questions" id="toc-guiding-questions" class="nav-link" data-scroll-target="#guiding-questions">Guiding questions</a></li>
   <li><a href="#begin-exploring" id="toc-begin-exploring" class="nav-link" data-scroll-target="#begin-exploring">Begin exploring</a></li>
   <li><a href="#problem-decomposition" id="toc-problem-decomposition" class="nav-link" data-scroll-target="#problem-decomposition">Problem decomposition</a></li>
-  <li><a href="#putting-it-together" id="toc-putting-it-together" class="nav-link" data-scroll-target="#putting-it-together">Putting it together</a></li>
+  <li><a href="#putting-it-back-together-optional" id="toc-putting-it-back-together-optional" class="nav-link" data-scroll-target="#putting-it-back-together-optional">Putting it back together (optional)</a></li>
   </ul></li>
   <li><a href="#recap-and-next-steps" id="toc-recap-and-next-steps" class="nav-link" data-scroll-target="#recap-and-next-steps">Recap and next steps</a></li>
   </ul>
@@ -427,7 +431,7 @@ Tip
 <p>Now, fill in the blanks below to get the most common sampling interval. Add comments describing what each line of code does.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>???_datetime <span class="ot">&lt;-</span> kefj_datetime[kefj_site <span class="sc">==</span> ???]</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>???_interval <span class="ot">&lt;-</span> ???_datetime[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">-</span> ???_datetime[<span class="sc">-</span>???]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>???_interval <span class="ot">&lt;-</span> ???_datetime[???<span class="sc">:</span>???] <span class="sc">-</span> ???_datetime[???<span class="sc">:</span>???]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>t???<span class="fu">e</span>(???)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -460,32 +464,52 @@ Tip
 <p>Check out <code>which.min()</code> and <code>which.max()</code></p>
 </div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This code chunk introduces two new things in R.</p>
+<p><code>as.POSIXct()</code> is a function for creating vectors that R recognizes as dates and times. For example, to create a variable representing noon on January 1, 2025 you could write <code>jan1_2025 &lt;- as.POSIXct("2025-01-1 12:00")</code>. The <code>tz</code> argument specifies the <strong>t</strong>ime<strong>z</strong>one. <code>"Etc/GMT+8"</code> is the timezone the <code>kefj</code> data were collected in.</p>
+<p><code>&amp;</code> represents “and”. It’s how you combine multiple conditions that have to be true. For example, let’s say I have four people of different ages represented by these vectors:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>people <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carla"</span>, <span class="st">"Danielle"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">16</span>, <span class="dv">22</span>, <span class="dv">29</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then I can find which people are older than 20 <em>and</em> younger than 25 like this:</p>
+<p><code>people[ages &gt; 20 &amp; ages &lt; 25]</code></p>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the hottest day</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>hottest_idx <span class="ot">&lt;-</span> ???(kefj_temperature)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hottest_time <span class="ot">&lt;-</span> ???[hottest_idx]</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>??? <span class="ot">&lt;-</span> kefj_site[???]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>hotday_start <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"???"</span>, <span class="at">tz =</span> <span class="st">"Etc/GMT+8"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>hotday_end <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"???"</span>, <span class="at">tz =</span> <span class="st">"Etc/GMT+8"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>hotday_idx <span class="ot">&lt;-</span> ??? <span class="sc">==</span> hottest_site <span class="sc">&amp;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  ??? <span class="sc">&gt;=</span> hotday_start <span class="sc">&amp;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  ??? <span class="sc">&lt;=</span> hotday_end</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>hotday_datetime <span class="ot">&lt;-</span> ???[hotday_idx]</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>hotday_temperature <span class="ot">&lt;-</span> ???</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>hotday_exposure <span class="ot">&lt;-</span> ???</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_kefj</span>(???, ???, ???)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for the coldest day</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the hottest day</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>hottest_idx <span class="ot">&lt;-</span> ???(kefj_temperature)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>hottest_time <span class="ot">&lt;-</span> ???[hottest_idx]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>??? <span class="ot">&lt;-</span> kefj_site[???]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>hotday_start <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"???"</span>, <span class="at">tz =</span> <span class="st">"Etc/GMT+8"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>hotday_end <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"???"</span>, <span class="at">tz =</span> <span class="st">"Etc/GMT+8"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>hotday_idx <span class="ot">&lt;-</span> ??? <span class="sc">==</span> hottest_site <span class="sc">&amp;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  ??? <span class="sc">&gt;=</span> hotday_start <span class="sc">&amp;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  ??? <span class="sc">&lt;=</span> hotday_end</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>hotday_datetime <span class="ot">&lt;-</span> ???[hotday_idx]</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>hotday_temperature <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>hotday_exposure <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_kefj</span>(???, ???, ???)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for the coldest day</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Examine your visualizations. What patterns do you notice in time, temperature, and exposure? Do those patterns match your intuition, or do they differ?</p>
 <p>Now that you’ve visualized the extreme temperatures you’re ready to begin calculating extreme temperature exposure. Re-read section 2.1 of Traiger et al.&nbsp;How did they define extreme heat exposure? Translate their written description to code and calculate the extreme heat exposure for the hottest day. Compare your answer to the visualization you made. Does it look right to you? Repeat this process for extreme cold exposure on the coldest day.</p>
 </section>
-<section id="putting-it-together" class="level3">
-<h3 class="anchored" data-anchor-id="putting-it-together">Putting it together</h3>
+<section id="putting-it-back-together-optional" class="level3">
+<h3 class="anchored" data-anchor-id="putting-it-back-together-optional">Putting it back together (optional)</h3>
+<p>You’ll see more about problem decomposition in PROG103. If you’d like a preview, try the following.</p>
 <p>Let’s go from analyzing a single day to a whole season. Re-read how Traiger et al.&nbsp;quantified extreme hot and cold air temperature exposures at the seasonal scale. Make a sketch of how you would do that for a single site and season.</p>
 <p>Pick one site and one season. What were the extreme heat and cold exposure at that site in that season? Repeat for a different site and a different season.</p>
-<p>Optional extension: Traiger et al.&nbsp;also calculated water temperature anomalies. Consider how you could do that. Make a sketch showing which vectors you would need and how you would use them. Write code to get the temperature anomalies for one site in one season in one year.</p>
+<p>Traiger et al.&nbsp;also calculated water temperature anomalies. Consider how you could do that. Make a sketch showing which vectors you would need and how you would use them. Write code to get the temperature anomalies for one site in one season in one year.</p>
 </section>
 </section>
 <section id="recap-and-next-steps" class="level2">
