@@ -1,3 +1,88 @@
 ---
 title: "PROG102: Functions"
+execute: 
+  eval: false
+bibliography: references.bib
 ---
+
+This is the second module of the **Programming** track. By the end of this module, you'll learn how to:
+
+-   Write your own R functions
+
+-   Use functions to hide details (*encapsulation*)
+
+-   Use *parameters* to make functions reusable
+
+## Pre-class preparation
+
+Set up the [PROG102 module](https://github.com/MarineCS-100B/prog102) on your computer (see [Module Setup and Submission](../../../modules.html)). There you'll find the guided notes to accompany these recorded lectures.
+
+### {{< fa film title="A roll of film" >}} Lectures
+
+#### Writing your own functions in R
+
+{{< video https://vimeo.com/1044553780 >}}
+
+#### How functions execute
+
+{{< video https://vimeo.com/1044554417 >}}
+
+#### Default and named parameters
+
+{{< video https://vimeo.com/1044555025 >}}
+
+## In-class activity
+
+In PROG101 you quantified the hours of exposure a mussel bed experienced to extreme heat or cold in a day. However, to change the site or date you'd have to copy-paste-edit the entire code. In this activity, you'll *parameterize* the extreme heat/cold procedures in functions to make them more readable and reusable.
+
+### Extracting data
+
+Review your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R.
+
+Now consider the inputs to your code. If you want to change the site and date, what variables would need to change? The variables that would change for different inputs are what you want to pick for your function's parameters.
+
+::: callout-note
+When converting code to a function, the process of changing fixed variables into flexible parameters is called *parameterization*.
+:::
+
+Recall functions have five parts:
+
+1.  The function's name
+2.  The keyword `function`
+3.  Parameters, enclosed in parentheses
+4.  The function's body, enclosed in curly braces
+5.  A return for the output
+
+I want you to write a function for extracting the temperature from a site for a given time range. Write down what you would pick for the function's name and the parameters' names.
+
+::: callout-tip
+When parameterizing a function, you're usually going from a specific case to a more general purpose tool. That's the whole point of reusable functions! So your parameter names will often be more general versions of the variable names used in the specific case.
+:::
+
+### Writing extraction functions
+
+Using the function and parameter names you picked, write a function with all five parts that extracts the temperature for a given site and date. Then, do the same for the exposure and the datetimes of the readings.
+
+Take a screenshot of the code for your function and annotate the screenshot (e.g. in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called "annotated_function.jpg" and add it to this repository.
+
+Test your functions out. Can you extract the data for site `Nuka_Pass` on July 1, 2018 and visualize them? It may help to review `as.POSIXct()` and `plot_kefj()` from PROG101. Add the code to prog102.R and save a copy of the plot as "nuka_pass_2018-07-01.jpg" in this repo.
+
+By writing the three extraction functions, you've encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why?
+
+### Functions within functions (optional)
+
+Even after writing your extraction functions, you probably had some repeated code in your call to `plot_kefj()`. Can you figure out how to parameterize the visualization code into its own function? What would you call that function and its parameters? Think carefully about what variables to convert into parameters! Hint: you'll have to call your extraction functions from within the visualization function.
+
+::: callout-note
+A function whose primary purpose is to simplify calling another function is called a *wrapper* function. By writing your own function here, you've *wrapped* `plot_kefj()`.
+:::
+
+Write your wrapper function for `plot_kefj()`. Call it to compare the visualizations for Nuka Pass on July 1, 2018 versus January 1, 2018. Add the code to prog102.R and save a copy of the second plot as "nuka_pass_2018-01-01.jpg" in this repo.
+
+## Recap and next steps
+
+In this module you learned how to make your code more readable and reusable by writing functions.
+
+PROG103 is a complementary module to this one. There you'll learn how to write branches (deciding what to do based on a condition) and loops. So while here we were still focused on individual sites and dates, in PROG103 you'll learn how to loop over multiple sites and dates.
+
+Fill out the [PROG102 reflection](https://forms.gle/JJXNGwP71Kut6PV17) to complete this module. Well done!

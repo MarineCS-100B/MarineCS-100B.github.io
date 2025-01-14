@@ -131,5 +131,33 @@
     "title": "Pair Programming",
     "section": "Suggestions for effective pair programming",
     "text": "Suggestions for effective pair programming\n\nHave each others’ backs. You’re in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.\nBe patient. When you’re new to coding, describing your ideas is really challenging. It’s natural to get frustrated when your partner doesn’t understand what you’re trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!\nTake breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect."
+  },
+  {
+    "objectID": "tracks/prog/prog102.html",
+    "href": "tracks/prog/prog102.html",
+    "title": "PROG102: Functions",
+    "section": "",
+    "text": "This is the second module of the Programming track. By the end of this module, you’ll learn how to:"
+  },
+  {
+    "objectID": "tracks/prog/prog102.html#pre-class-preparation",
+    "href": "tracks/prog/prog102.html#pre-class-preparation",
+    "title": "PROG102: Functions",
+    "section": "Pre-class preparation",
+    "text": "Pre-class preparation\nSet up the PROG102 module on your computer (see Module Setup and Submission). There you’ll find the guided notes to accompany these recorded lectures.\n\n Lectures\n\nWriting your own functions in R\n\n\n\nHow functions execute\n\n\n\nDefault and named parameters"
+  },
+  {
+    "objectID": "tracks/prog/prog102.html#in-class-activity",
+    "href": "tracks/prog/prog102.html#in-class-activity",
+    "title": "PROG102: Functions",
+    "section": "In-class activity",
+    "text": "In-class activity\nIn PROG101 you quantified the hours of exposure a mussel bed experienced to extreme heat or cold in a day. However, to change the site or date you’d have to copy-paste-edit the entire code. In this activity, you’ll parameterize the extreme heat/cold procedures in functions to make them more readable and reusable.\n\nExtracting data\nReview your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R.\nNow consider the inputs to your code. If you want to change the site and date, what variables would need to change? The variables that would change for different inputs are what you want to pick for your function’s parameters.\n\n\n\n\n\n\nNote\n\n\n\nWhen converting code to a function, the process of changing fixed variables into flexible parameters is called parameterization.\n\n\nRecall functions have five parts:\n\nThe function’s name\nThe keyword function\nParameters, enclosed in parentheses\nThe function’s body, enclosed in curly braces\nA return for the output\n\nI want you to write a function for extracting the temperature from a site for a given time range. Write down what you would pick for the function’s name and the parameters’ names.\n\n\n\n\n\n\nTip\n\n\n\nWhen parameterizing a function, you’re usually going from a specific case to a more general purpose tool. That’s the whole point of reusable functions! So your parameter names will often be more general versions of the variable names used in the specific case.\n\n\n\n\nWriting extraction functions\nUsing the function and parameter names you picked, write a function with all five parts that extracts the temperature for a given site and date. Then, do the same for the exposure and the datetimes of the readings.\nTake a screenshot of the code for your function and annotate the screenshot (e.g. in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called “annotated_function.jpg” and add it to this repository.\nTest your functions out. Can you extract the data for site Nuka_Pass on July 1, 2018 and visualize them? It may help to review as.POSIXct() and plot_kefj() from PROG101. Add the code to prog102.R and save a copy of the plot as “nuka_pass_2018-07-01.jpg” in this repo.\nBy writing the three extraction functions, you’ve encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why?\n\n\nFunctions within functions (optional)\nEven after writing your extraction functions, you probably had some repeated code in your call to plot_kefj(). Can you figure out how to parameterize the visualization code into its own function? What would you call that function and its parameters? Think carefully about what variables to convert into parameters! Hint: you’ll have to call your extraction functions from within the visualization function.\n\n\n\n\n\n\nNote\n\n\n\nA function whose primary purpose is to simplify calling another function is called a wrapper function. By writing your own function here, you’ve wrapped plot_kefj().\n\n\nWrite your wrapper function for plot_kefj(). Call it to compare the visualizations for Nuka Pass on July 1, 2018 versus January 1, 2018. Add the code to prog102.R and save a copy of the second plot as “nuka_pass_2018-01-01.jpg” in this repo."
+  },
+  {
+    "objectID": "tracks/prog/prog102.html#recap-and-next-steps",
+    "href": "tracks/prog/prog102.html#recap-and-next-steps",
+    "title": "PROG102: Functions",
+    "section": "Recap and next steps",
+    "text": "Recap and next steps\nIn this module you learned how to make your code more readable and reusable by writing functions.\nPROG103 is a complementary module to this one. There you’ll learn how to write branches (deciding what to do based on a condition) and loops. So while here we were still focused on individual sites and dates, in PROG103 you’ll learn how to loop over multiple sites and dates.\nFill out the PROG102 reflection to complete this module. Well done!"
   }
 ]
