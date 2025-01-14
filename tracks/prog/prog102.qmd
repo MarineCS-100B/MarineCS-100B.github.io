@@ -21,15 +21,15 @@ Set up the [PROG102 module](https://github.com/MarineCS-100B/prog102) on your co
 
 #### Writing your own functions in R
 
-{{< video https://vimeo.com/1044553780 >}}
+{{< video https://vimeo.com/1046641994 >}}
 
 #### How functions execute
 
-{{< video https://vimeo.com/1044554417 >}}
+{{< video https://vimeo.com/1046642003 >}}
 
 #### Default and named parameters
 
-{{< video https://vimeo.com/1044555025 >}}
+{{< video https://vimeo.com/1046642020 >}}
 
 ## In-class activity
 
