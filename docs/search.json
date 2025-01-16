@@ -28,53 +28,25 @@
     "text": "Module submission\nWe’ll use GitHub Desktop for steps 3 and 4. Make sure GitHub Desktop recognizes your repo.\n\n\nStep 3: Commit your changes\nAfter you complete the module it’s time to commit your changes. This updates your local repository. In GitHub Desktop, you should see a list of files with changes on the left and the line-by-line differences on the right. Fill in the commit message below and hit the blue Commit to main button.\n\n\n\nStep 4: Push your commits\nAfter committing, you should no longer see any changed files. Click the Push origin button (A). This updates your remote repo on GitHub, which you can see online (B).\n\n\n\nStep 5: Open an Issue\nClick the Issues tab on GitHub (in the browser) and create a new Issue. Mention me (@FlukeAndFeather) in the Issue, which will let me know you’ve submitted your module. If you’re submitting the in-class portion for your pair, mention them as well. Congrats! You’re done!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Intro to Marine Data Science",
+    "objectID": "pair-programming.html",
+    "href": "pair-programming.html",
+    "title": "Pair Programming",
     "section": "",
-    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+    "text": "We’re using pair programming for the in-class parts of modules. As the name suggests, pair programming is when two programmers write code together. Research shows that pair programming leads to better quality code in less time, so it’s popular in some software development circles. More importantly for you, it’s also been demonstrated that pair programming is an excellent learning tool (Hanks et al. 2011). There are lots of reasons pair programming helps learning. For example:"
   },
   {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Intro to Marine Data Science",
-    "section": "",
-    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+    "objectID": "pair-programming.html#pair-programming-in-practice",
+    "href": "pair-programming.html#pair-programming-in-practice",
+    "title": "Pair Programming",
+    "section": "Pair programming in practice",
+    "text": "Pair programming in practice\nHere’s how we’ll use pair programming this quarter. Keep in mind: this is only for the in-class portion. The pre-class preparation (videos, notes, exercises) should be done individually.\n\nChoose a partner\nEach week you’ll form a pair with another student. There will be a question about who you’re working with on the end-of-week survey.\nHere are some important things to consider in choosing a partner:\n\nFind someone interested in similar modules as you are - you’ll be working on the same tasks together.\nPair programming works best when both partners have relatively similar experience levels with programming. I emphasize relative because no two of you are exactly the same. Slight differences are to be expected! However, a situation where one partner has substantial experience and the other is brand new will probably not work as well.\nI strongly encourage you to change partners every week! That may not always be possible based on module interest and experience level. However, when you can work with someone new please take that opportunity. Your learning will benefit from interacting the diversity of perspectives and experiences in the class.\n\n\n\nStart programming\n\nPut one laptop away. You’re both going to be working at one keyboard in one repository.\nChoose roles. One partner will be the driver and the other will be the navigator.\n\nThe driver’s primary responsibility is to type - you’ll be the one at the keyboard and focused on the in-the-weeds tasks.\nThe navigator’s primary responsibility is to talk - you’ll be guiding the conversation and staying focused on the big picture as the driver types.\nPrimary is emphasized because the line between the roles is fuzzy. The driver should be thinking critically and considering the whole of the problem. The navigator should be watching what the driver types and helping to find typos and other errors.\n\nSwitch roles every 20 minutes.\n\n\n\nSubmit the module\nBecause you’re both working at the same laptop, your repositories won’t match. Both of you should still submit your repositories on GitHub because I want to see both of your pre-class notes and exercises. Whichever partner’s repository contains the in-class part of the module should mention their partner in the issue they open to submit the repo."
   },
   {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "Intro to Marine Data Science",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy\nEmail: maxczap@ucsb.edu\n\n\n\n\nLearning Assistant\n\n\n\n\n\n\n\n\n\n\n\nHayden Vega\nEmail: haydenvega@umail.ucsb.edu"
-  },
-  {
-    "objectID": "course-setup.html",
-    "href": "course-setup.html",
-    "title": "Course Setup Instructions",
-    "section": "",
-    "text": "This document will guide you to set up your computer for this course."
-  },
-  {
-    "objectID": "course-setup.html#r-and-rstudio",
-    "href": "course-setup.html#r-and-rstudio",
-    "title": "Course Setup Instructions",
-    "section": "R and RStudio",
-    "text": "R and RStudio\nR is the programming language we’ll be using and RStudio is the interactive development environment we’ll use for writing and running code.\nGo to the RStudio installation page and install R first, then RStudio1.\nInstall the course companion package. Open RStudio and run the following commands in the Console pane:\ninstall.packages(\"remotes\")\nremotes::install_github(\"MarineCS-100B/marinecs100b\")"
-  },
-  {
-    "objectID": "course-setup.html#git-and-github",
-    "href": "course-setup.html#git-and-github",
-    "title": "Course Setup Instructions",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\nGit is a version control system for keeping track of files and GitHub is an online hosting service for Git repositories. They’re important tools for data scientists and you’ll use them for submitting modules this quarter.\n\nGit on Windows\nInstall Git for Windows.\n\n\nGit on Mac\nInstall the Xcode Command Line Tools (which include Git). Open Terminal and run this command:\nxcode-select --install\n\n\nGitHub account\nWhile Git is installing, go to GitHub and create an account. Then install GitHub Desktop."
-  },
-  {
-    "objectID": "course-setup.html#footnotes",
-    "href": "course-setup.html#footnotes",
-    "title": "Course Setup Instructions",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIf you’re on a Mac, make sure you drag the application to your Application folder and eject the DMG. Don’t run RStudio directly from the DMG. Raise your hand if you have questions about this part!↩︎"
+    "objectID": "pair-programming.html#suggestions-for-effective-pair-programming",
+    "href": "pair-programming.html#suggestions-for-effective-pair-programming",
+    "title": "Pair Programming",
+    "section": "Suggestions for effective pair programming",
+    "text": "Suggestions for effective pair programming\n\nHave each others’ backs. You’re in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.\nBe patient. When you’re new to coding, describing your ideas is really challenging. It’s natural to get frustrated when your partner doesn’t understand what you’re trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!\nTake breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect."
   },
   {
     "objectID": "tracks/prog/prog101.html",
@@ -105,34 +77,6 @@
     "text": "Recap and next steps\nIn this module you started using R to represent and manipulate data. That’s a critical skill for a marine data scientist!\nFuture modules in this track will build on what you’ve learned here.\n\nIn this module, you called built-in R functions like which.min() and table(). In PROG102 you’ll learn how to write your own functions to encapsulate tasks like calculating extreme temperature exposure.\nPROG103 will cover branches and loops. Recall how you had to copy-paste-edit code in this module to apply the same task to different inputs (e.g., extreme hot vs extreme cold, one site vs another). That’s a time-consuming and error-prone way of doing things. Branches and loops are the solution for making choices and repeating operations.\n\nFill out the PROG101 reflection to complete this module. Well done!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "pair-programming.html",
-    "href": "pair-programming.html",
-    "title": "Pair Programming",
-    "section": "",
-    "text": "We’re using pair programming for the in-class parts of modules. As the name suggests, pair programming is when two programmers write code together. Research shows that pair programming leads to better quality code in less time, so it’s popular in some software development circles. More importantly for you, it’s also been demonstrated that pair programming is an excellent learning tool (Hanks et al. 2011). There are lots of reasons pair programming helps learning. For example:"
-  },
-  {
-    "objectID": "pair-programming.html#pair-programming-in-practice",
-    "href": "pair-programming.html#pair-programming-in-practice",
-    "title": "Pair Programming",
-    "section": "Pair programming in practice",
-    "text": "Pair programming in practice\nHere’s how we’ll use pair programming this quarter. Keep in mind: this is only for the in-class portion. The pre-class preparation (videos, notes, exercises) should be done individually.\n\nChoose a partner\nEach week you’ll form a pair with another student. There will be a question about who you’re working with on the end-of-week survey.\nHere are some important things to consider in choosing a partner:\n\nFind someone interested in similar modules as you are - you’ll be working on the same tasks together.\nPair programming works best when both partners have relatively similar experience levels with programming. I emphasize relative because no two of you are exactly the same. Slight differences are to be expected! However, a situation where one partner has substantial experience and the other is brand new will probably not work as well.\nI strongly encourage you to change partners every week! That may not always be possible based on module interest and experience level. However, when you can work with someone new please take that opportunity. Your learning will benefit from interacting the diversity of perspectives and experiences in the class.\n\n\n\nStart programming\n\nPut one laptop away. You’re both going to be working at one keyboard in one repository.\nChoose roles. One partner will be the driver and the other will be the navigator.\n\nThe driver’s primary responsibility is to type - you’ll be the one at the keyboard and focused on the in-the-weeds tasks.\nThe navigator’s primary responsibility is to talk - you’ll be guiding the conversation and staying focused on the big picture as the driver types.\nPrimary is emphasized because the line between the roles is fuzzy. The driver should be thinking critically and considering the whole of the problem. The navigator should be watching what the driver types and helping to find typos and other errors.\n\nSwitch roles every 20 minutes.\n\n\n\nSubmit the module\nBecause you’re both working at the same laptop, your repositories won’t match. Both of you should still submit your repositories on GitHub because I want to see both of your pre-class notes and exercises. Whichever partner’s repository contains the in-class part of the module should mention their partner in the issue they open to submit the repo."
-  },
-  {
-    "objectID": "pair-programming.html#suggestions-for-effective-pair-programming",
-    "href": "pair-programming.html#suggestions-for-effective-pair-programming",
-    "title": "Pair Programming",
-    "section": "Suggestions for effective pair programming",
-    "text": "Suggestions for effective pair programming\n\nHave each others’ backs. You’re in this together! The most important way to support each other is coming to class ready to participate. The pre-class preparation is important for making sure you and your partner are both ready to collaborate. Give it your full attention.\nBe patient. When you’re new to coding, describing your ideas is really challenging. It’s natural to get frustrated when your partner doesn’t understand what you’re trying to tell them or vice versa. Figuring out how to articulate your ideas is important for learning how to do data science!\nTake breaks. Learning any skill, particularly technical skills, is mentally taxing. Your brain will saturate well before the end of a 75 minute class. Remind each other to get up, walk around, grab a drink of water - anything to unplug and reconnect."
-  },
-  {
     "objectID": "tracks/prog/prog102.html",
     "href": "tracks/prog/prog102.html",
     "title": "PROG102: Functions",
@@ -151,7 +95,7 @@
     "href": "tracks/prog/prog102.html#in-class-activity",
     "title": "PROG102: Functions",
     "section": "In-class activity",
-    "text": "In-class activity\nIn PROG101 you quantified the hours of exposure a mussel bed experienced to extreme heat or cold in a day. However, to change the site or date you’d have to copy-paste-edit the entire code. In this activity, you’ll parameterize the extreme heat/cold procedures in functions to make them more readable and reusable.\n\nExtracting data\nReview your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R.\nNow consider the inputs to your code. If you want to change the site and date, what variables would need to change? The variables that would change for different inputs are what you want to pick for your function’s parameters.\n\n\n\n\n\n\nNote\n\n\n\nWhen converting code to a function, the process of changing fixed variables into flexible parameters is called parameterization.\n\n\nRecall functions have five parts:\n\nThe function’s name\nThe keyword function\nParameters, enclosed in parentheses\nThe function’s body, enclosed in curly braces\nA return for the output\n\nI want you to write a function for extracting the temperature from a site for a given time range. Write down what you would pick for the function’s name and the parameters’ names.\n\n\n\n\n\n\nTip\n\n\n\nWhen parameterizing a function, you’re usually going from a specific case to a more general purpose tool. That’s the whole point of reusable functions! So your parameter names will often be more general versions of the variable names used in the specific case.\n\n\n\n\nWriting extraction functions\nUsing the function and parameter names you picked, write a function with all five parts that extracts the temperature for a given site and date. Then, do the same for the exposure and the datetimes of the readings.\nTake a screenshot of the code for your function and annotate the screenshot (e.g. in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called “annotated_function.jpg” and add it to this repository.\nTest your functions out. Can you extract the data for site Nuka_Pass on July 1, 2018 and visualize them? It may help to review as.POSIXct() and plot_kefj() from PROG101. Add the code to prog102.R and save a copy of the plot as “nuka_pass_2018-07-01.jpg” in this repo.\nBy writing the three extraction functions, you’ve encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why?\n\n\nFunctions within functions (optional)\nEven after writing your extraction functions, you probably had some repeated code in your call to plot_kefj(). Can you figure out how to parameterize the visualization code into its own function? What would you call that function and its parameters? Think carefully about what variables to convert into parameters! Hint: you’ll have to call your extraction functions from within the visualization function.\n\n\n\n\n\n\nNote\n\n\n\nA function whose primary purpose is to simplify calling another function is called a wrapper function. By writing your own function here, you’ve wrapped plot_kefj().\n\n\nWrite your wrapper function for plot_kefj(). Call it to compare the visualizations for Nuka Pass on July 1, 2018 versus January 1, 2018. Add the code to prog102.R and save a copy of the second plot as “nuka_pass_2018-01-01.jpg” in this repo."
+    "text": "In-class activity\nIn PROG101 you quantified the hours of exposure a mussel bed experienced to extreme heat or cold in a day. However, to change the site or date you’d have to copy-paste-edit the entire code. In this activity, you’ll parameterize the extreme heat/cold procedures in functions to make them more readable and reusable.\nThis activity has multiple problems for you to solve, labeled P1, P2, P3, and so on. You’ll find the same labels in prog102.R in your copy of the module.\n\nWriting a utility function\nUtility functions are short functions that encapsulate a common task with a useful name. You’re going to write one for converting text to datetime objects in the Alaskan timezone.\nReview your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R (P1). Make a mental note of the line of code that creates a datetime object (which R calls POSIXct).\nRecall functions have five parts:\n\nThe function’s name\nThe keyword function\nParameters, enclosed in parentheses\nThe function’s body, enclosed in curly braces\nA return for the output\n\nFill in the blanks below to write the Alaskan datetime utility function (P2). Its input should be a text string representing a datetime (e.g., “2020-02-02 16:00”). The output should be a POSIXct object for that datetime in the Alaskan timezone. Make sure you choose names for the function and parameters that make it easy to read! Each set of ‘???’ corresponds to one of the five parts of a function.\n??? &lt;- ???(???) {\n  ???\n  return(???)\n}\nYou’ll use this utility function in the next section, where you’ll write functions for extracting temperatures, exposures, and datetimes.\n\n\nExtracting data\nFirst, we’ll visualize temperature and exposure for two different sites on two different dates by copy-paste-edit.\nMake a copy of your code from P1 and edit it to plot the temperature and exposure for “Aialik” on 2012-06-01 (P3).\nMake a copy of your code from P3 and edit it to plot the temperature and exposure for “Harris” on 2016-04-05 (P4).\nCompare your solutions for P3 and P4 - what variables changed (P5)? The variables that change values for different inputs are what you want to pick for your function’s parameters.\n\n\n\n\n\n\nNote\n\n\n\nWhen converting code to a function, the process of changing fixed variables into flexible parameters is called parameterization.\n\n\nYou’re going to convert this code into a function. Remember that functions should make our code easier to read, which means the function and parameters should have descriptive names. What you would pick for the temperature extraction function and parameters’ names (P6)?\n\n\n\n\n\n\nTip\n\n\n\nWhen parameterizing a function, you’re usually going from a specific case to a more general purpose tool. That’s the whole point of reusable functions! So your parameter names will often be more general versions of the variable names used in the specific case.\n\n\n\n\nWriting extraction functions\nUsing the function and parameter names you picked, write a function (with all five parts!) that extracts the temperature for a given site and date. This is where you’ll use the utility function you wrote above. Fill in the blanks in the code below to write your temperature extraction function (P7).\n??? &lt;- ???(???, ???, ???) {\n  ??? &lt;- your_utility_function_name_here(???)\n  ??? &lt;- your_utility_function_name_here(???)\n  ???\n  return(???)\n}\nNow you’ll do the same for extracting exposure and datetimes. Make a copy of your solution to P7, and edit it to create exposure and datetime extraction functions (P8). As always, remember to choose helpful function names!\nTake a screenshot of the code for your temperature extraction function and annotate the screenshot (e.g. in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called “annotated_function.jpg” and add it to your copy of the module repository (P9).\nNow let’s test your functions. Extract the temperature, exposure, and datetime for site Nuka_Pass on July 1, 2018 and visualize them (P10). It may help to review as.POSIXct() and plot_kefj() from PROG101. Save a copy of the plot as “nuka_pass_2018-07-01.png” in this repo (P11). There’s an option to export a plot as an image from the Plots pane (see screenshot below).\n\nBy writing the three extraction functions, you’ve encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why? (P12)"
   },
   {
     "objectID": "tracks/prog/prog102.html#recap-and-next-steps",
@@ -159,5 +103,61 @@
     "title": "PROG102: Functions",
     "section": "Recap and next steps",
     "text": "Recap and next steps\nIn this module you learned how to make your code more readable and reusable by writing functions.\nPROG103 is a complementary module to this one. There you’ll learn how to write branches (deciding what to do based on a condition) and loops. So while here we were still focused on individual sites and dates, in PROG103 you’ll learn how to loop over multiple sites and dates.\nFill out the PROG102 reflection to complete this module. Well done!"
+  },
+  {
+    "objectID": "course-setup.html",
+    "href": "course-setup.html",
+    "title": "Course Setup Instructions",
+    "section": "",
+    "text": "This document will guide you to set up your computer for this course."
+  },
+  {
+    "objectID": "course-setup.html#r-and-rstudio",
+    "href": "course-setup.html#r-and-rstudio",
+    "title": "Course Setup Instructions",
+    "section": "R and RStudio",
+    "text": "R and RStudio\nR is the programming language we’ll be using and RStudio is the interactive development environment we’ll use for writing and running code.\nGo to the RStudio installation page and install R first, then RStudio1.\nInstall the course companion package. Open RStudio and run the following commands in the Console pane:\ninstall.packages(\"remotes\")\nremotes::install_github(\"MarineCS-100B/marinecs100b\")"
+  },
+  {
+    "objectID": "course-setup.html#git-and-github",
+    "href": "course-setup.html#git-and-github",
+    "title": "Course Setup Instructions",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\nGit is a version control system for keeping track of files and GitHub is an online hosting service for Git repositories. They’re important tools for data scientists and you’ll use them for submitting modules this quarter.\n\nGit on Windows\nInstall Git for Windows.\n\n\nGit on Mac\nInstall the Xcode Command Line Tools (which include Git). Open Terminal and run this command:\nxcode-select --install\n\n\nGitHub account\nWhile Git is installing, go to GitHub and create an account. Then install GitHub Desktop."
+  },
+  {
+    "objectID": "course-setup.html#footnotes",
+    "href": "course-setup.html#footnotes",
+    "title": "Course Setup Instructions",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIf you’re on a Mac, make sure you drag the application to your Application folder and eject the DMG. Don’t run RStudio directly from the DMG. Raise your hand if you have questions about this part!↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Intro to Marine Data Science",
+    "section": "",
+    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Intro to Marine Data Science",
+    "section": "",
+    "text": "Data science merges computer science and statistics with a particular field of study. In our case, that particular field of study is marine science. You and your classmates will explore examples from marine research to learn data science skills and tools.\n\n\n\nComputational thinking and writing code (Programming)\nDescribing and simulating data (Probability and statistics)\nOrganizing, sharing, and finding data (Informatics)\nCommunicating your results and data science workflow (Communication)\n\n\n\n\nIntro to Marine Data Science is a self-directed, mastery-oriented class. As your instructor, I want you to take ownership for your learning and focus on mastering the skills that excite you. That’s hard to do in traditional class formats because you’re all entering this class with diverse experiences, interests, and goals.\nThis class has an experimental format. There are more lessons available to you on this course website than I expect you to complete in one quarter. Your task is to choose the lessons that match your interests and goals, and work through them with a partner. Each lesson has readings and/or recorded lectures, and exercises for you to complete before class. In class, you’ll apply the skills from that lesson to real-world questions, like:\n\nWhere are the world’s oceans warming the fastest?\nAre deep-sea fish and invertebrates important prey for marine predators?\nHow can we fill in the at-sea data collection gaps caused by Covid?"
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "Intro to Marine Data Science",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\nInstructor\n\n\n\n\n\n\n\n\n\n\n\nMax Czapanskiy\nEmail: maxczap@ucsb.edu\n\n\n\n\nLearning Assistant\n\n\n\n\n\n\n\n\n\n\n\nHayden Vega\nEmail: haydenvega@umail.ucsb.edu"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]

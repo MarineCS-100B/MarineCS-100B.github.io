@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -259,9 +293,9 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity">In-class activity</a>
   <ul class="collapse">
+  <li><a href="#writing-a-utility-function" id="toc-writing-a-utility-function" class="nav-link" data-scroll-target="#writing-a-utility-function">Writing a utility function</a></li>
   <li><a href="#extracting-data" id="toc-extracting-data" class="nav-link" data-scroll-target="#extracting-data">Extracting data</a></li>
   <li><a href="#writing-extraction-functions" id="toc-writing-extraction-functions" class="nav-link" data-scroll-target="#writing-extraction-functions">Writing extraction functions</a></li>
-  <li><a href="#functions-within-functions-optional" id="toc-functions-within-functions-optional" class="nav-link" data-scroll-target="#functions-within-functions-optional">Functions within functions (optional)</a></li>
   </ul></li>
   <li><a href="#recap-and-next-steps" id="toc-recap-and-next-steps" class="nav-link" data-scroll-target="#recap-and-next-steps">Recap and next steps</a></li>
   </ul>
@@ -317,10 +351,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="in-class-activity" class="level2">
 <h2 class="anchored" data-anchor-id="in-class-activity">In-class activity</h2>
 <p>In PROG101 you quantified the hours of exposure a mussel bed experienced to extreme heat or cold in a day. However, to change the site or date you’d have to copy-paste-edit the entire code. In this activity, you’ll <em>parameterize</em> the extreme heat/cold procedures in functions to make them more readable and reusable.</p>
+<p>This activity has multiple problems for you to solve, labeled <strong>P1</strong>, <strong>P2</strong>, <strong>P3</strong>, and so on. You’ll find the same labels in prog102.R in your copy of the module.</p>
+<section id="writing-a-utility-function" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-utility-function">Writing a utility function</h3>
+<p>Utility functions are short functions that encapsulate a common task with a useful name. You’re going to write one for converting text to datetime objects in the Alaskan timezone.</p>
+<p>Review your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R (<strong>P1</strong>). Make a mental note of the line of code that creates a datetime object (which R calls <code>POSIXct</code>).</p>
+<p>Recall functions have five parts:</p>
+<ol type="1">
+<li>The function’s name</li>
+<li>The keyword <code>function</code></li>
+<li>Parameters, enclosed in parentheses</li>
+<li>The function’s body, enclosed in curly braces</li>
+<li>A return for the output</li>
+</ol>
+<p>Fill in the blanks below to write the Alaskan datetime utility function (<strong>P2</strong>). Its input should be a text string representing a datetime (e.g., “2020-02-02 16:00”). The output should be a <code>POSIXct</code> object for that datetime in the Alaskan timezone. Make sure you choose names for the function and parameters that make it easy to read! Each set of ‘???’ corresponds to one of the five parts of a function.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>??? <span class="ot">&lt;-</span> ???(???) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  ???</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(???)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’ll use this utility function in the next section, where you’ll write functions for extracting temperatures, exposures, and datetimes.</p>
+</section>
 <section id="extracting-data" class="level3">
 <h3 class="anchored" data-anchor-id="extracting-data">Extracting data</h3>
-<p>Review your code from PROG101. How did you extract the temperature and exposure from the hottest day? Copy-paste the code into prog102.R.</p>
-<p>Now consider the inputs to your code. If you want to change the site and date, what variables would need to change? The variables that would change for different inputs are what you want to pick for your function’s parameters.</p>
+<p>First, we’ll visualize temperature and exposure for two different sites on two different dates by copy-paste-edit.</p>
+<p>Make a copy of your code from <strong>P1</strong> and edit it to plot the temperature and exposure for “Aialik” on 2012-06-01 (<strong>P3</strong>).</p>
+<p>Make a copy of your code from P3 and edit it to plot the temperature and exposure for “Harris” on 2016-04-05 (<strong>P4</strong>).</p>
+<p>Compare your solutions for P3 and P4 - what variables changed (<strong>P5</strong>)? The variables that change values for different inputs are what you want to pick for your function’s parameters.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -334,15 +390,7 @@ Note
 <p>When converting code to a function, the process of changing fixed variables into flexible parameters is called <em>parameterization</em>.</p>
 </div>
 </div>
-<p>Recall functions have five parts:</p>
-<ol type="1">
-<li>The function’s name</li>
-<li>The keyword <code>function</code></li>
-<li>Parameters, enclosed in parentheses</li>
-<li>The function’s body, enclosed in curly braces</li>
-<li>A return for the output</li>
-</ol>
-<p>I want you to write a function for extracting the temperature from a site for a given time range. Write down what you would pick for the function’s name and the parameters’ names.</p>
+<p>You’re going to convert this code into a function. Remember that functions should make our code easier to read, which means the function and parameters should have descriptive names. What you would pick for the temperature extraction function and parameters’ names (<strong>P6</strong>)?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -359,28 +407,18 @@ Tip
 </section>
 <section id="writing-extraction-functions" class="level3">
 <h3 class="anchored" data-anchor-id="writing-extraction-functions">Writing extraction functions</h3>
-<p>Using the function and parameter names you picked, write a function with all five parts that extracts the temperature for a given site and date. Then, do the same for the exposure and the datetimes of the readings.</p>
-<p>Take a screenshot of the code for your function and annotate the screenshot (e.g.&nbsp;in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called “annotated_function.jpg” and add it to this repository.</p>
-<p>Test your functions out. Can you extract the data for site <code>Nuka_Pass</code> on July 1, 2018 and visualize them? It may help to review <code>as.POSIXct()</code> and <code>plot_kefj()</code> from PROG101. Add the code to prog102.R and save a copy of the plot as “nuka_pass_2018-07-01.jpg” in this repo.</p>
-<p>By writing the three extraction functions, you’ve encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why?</p>
-</section>
-<section id="functions-within-functions-optional" class="level3">
-<h3 class="anchored" data-anchor-id="functions-within-functions-optional">Functions within functions (optional)</h3>
-<p>Even after writing your extraction functions, you probably had some repeated code in your call to <code>plot_kefj()</code>. Can you figure out how to parameterize the visualization code into its own function? What would you call that function and its parameters? Think carefully about what variables to convert into parameters! Hint: you’ll have to call your extraction functions from within the visualization function.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A function whose primary purpose is to simplify calling another function is called a <em>wrapper</em> function. By writing your own function here, you’ve <em>wrapped</em> <code>plot_kefj()</code>.</p>
-</div>
-</div>
-<p>Write your wrapper function for <code>plot_kefj()</code>. Call it to compare the visualizations for Nuka Pass on July 1, 2018 versus January 1, 2018. Add the code to prog102.R and save a copy of the second plot as “nuka_pass_2018-01-01.jpg” in this repo.</p>
+<p>Using the function and parameter names you picked, write a function (with all five parts!) that extracts the temperature for a given site and date. This is where you’ll use the utility function you wrote above. Fill in the blanks in the code below to write your temperature extraction function (<strong>P7</strong>).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>??? <span class="ot">&lt;-</span> ???(???, ???, ???) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  ??? <span class="ot">&lt;-</span> <span class="fu">your_utility_function_name_here</span>(???)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  ??? <span class="ot">&lt;-</span> <span class="fu">your_utility_function_name_here</span>(???)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  ???</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(???)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now you’ll do the same for extracting exposure and datetimes. Make a copy of your solution to <strong>P7</strong>, and edit it to create exposure and datetime extraction functions (<strong>P8</strong>). As always, remember to choose helpful function names!</p>
+<p>Take a screenshot of the code for your temperature extraction function and annotate the screenshot (e.g.&nbsp;in Powerpoint or Keynote) to label the five parts of your function. Export your annotated version as a JPEG called “annotated_function.jpg” and add it to your copy of the module repository (<strong>P9</strong>).</p>
+<p>Now let’s test your functions. Extract the temperature, exposure, and datetime for site <code>Nuka_Pass</code> on July 1, 2018 and visualize them (<strong>P10</strong>). It may help to review <code>as.POSIXct()</code> and <code>plot_kefj()</code> from PROG101. Save a copy of the plot as “nuka_pass_2018-07-01.png” in this repo (<strong>P11</strong>). There’s an option to export a plot as an image from the Plots pane (see screenshot below).</p>
+<p><img src="images/save_plot.png" class="img-fluid" alt="A screenshot of the plot pane in R showing where the Save as Image option is." width="600"></p>
+<p>By writing the three extraction functions, you’ve encapsulated the logic for extracting data. Compare the code you wrote to create the plot in this module to the code you wrote in PROG101. Qualitatively, how do they compare? Which one is easier to read and why? (<strong>P12</strong>)</p>
 </section>
 </section>
 <section id="recap-and-next-steps" class="level2">
