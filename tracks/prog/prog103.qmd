@@ -1,3 +1,35 @@
 ---
 title: "PROG103: Branches and Loops"
 ---
+
+This is the third module of the **Programming** track. By the end of this module, you'll learn how to:
+
+-   Repeat operations using *vectorized* functions and `for` loops
+
+-   Use `if`, `else if`, and `else` statements to make choices based on conditions
+
+## Pre-class preparation
+
+Set up the [PROG102 module](https://github.com/MarineCS-100B/prog103) on your computer (see [Module Setup and Submission](../../../modules.html)). There you'll find the guided notes to accompany these recorded lectures.
+
+### {{< fa film title="A roll of film" >}} Lectures
+
+#### Conditions in R
+
+{{< video https://vimeo.com/1046641994 >}}
+
+#### Making choices with `if`, `else`, and `else if`
+
+{{< video https://vimeo.com/1046642003 >}}
+
+#### Repeating yourself with *vectorized* functions
+
+{{< video https://vimeo.com/1046642020 >}}
+
+#### Repeating yourself with `for` loops
+
+{{< video https://vimeo.com/1046642020 >}}
+
+## In-class activity
+
+In PROG102 you wrote functions to extract temperatures, exposures, and time from the `kefj` dataset. Here, you'll use loops and if-then statements to calculate extreme hot and cold exposure across sites and season.
