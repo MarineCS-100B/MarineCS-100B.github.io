@@ -20,7 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -39,6 +93,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,8 +302,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-class-preparation" id="toc-pre-class-preparation" class="nav-link active" data-scroll-target="#pre-class-preparation">Pre-class preparation</a>
+  <ul class="collapse">
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</a></li>
+  </ul></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity">In-class activity</a>
+  <ul class="collapse">
+  <li><a href="#review-write-a-function" id="toc-review-write-a-function" class="nav-link" data-scroll-target="#review-write-a-function">Review: write a function</a></li>
+  <li><a href="#make-an-extreme-choice" id="toc-make-an-extreme-choice" class="nav-link" data-scroll-target="#make-an-extreme-choice">Make an extreme choice</a></li>
+  <li><a href="#season-to-taste" id="toc-season-to-taste" class="nav-link" data-scroll-target="#season-to-taste">Season to taste</a></li>
+  </ul></li>
+  <li><a href="#recap-and-next-steps" id="toc-recap-and-next-steps" class="nav-link" data-scroll-target="#recap-and-next-steps">Recap and next steps</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,10 +343,146 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This is the third module of the <strong>Programming</strong> track. By the end of this module, you’ll learn how to:</p>
+<ul>
+<li><p>Repeat operations using <em>vectorized</em> functions and <code>for</code> loops</p></li>
+<li><p>Use <code>if</code>, <code>else if</code>, and <code>else</code> statements to make choices based on conditions</p></li>
+</ul>
+<section id="pre-class-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="pre-class-preparation">Pre-class preparation</h2>
+<p>Set up the <a href="https://github.com/MarineCS-100B/prog103">PROG103</a><a href="https://github.com/MarineCS-100B/prog103">module</a> on your computer (see <a href="../../../modules.html">Module Setup and Submission</a>). There you’ll find the guided notes and exercises to accompany these recorded lectures.</p>
+<section id="lectures" class="level3">
+<h3 class="anchored" data-anchor-id="lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</h3>
+<section id="conditions-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="conditions-in-r">Conditions in R</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1049903408" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="making-choices-with-if-else-and-else-if" class="level4">
+<h4 class="anchored" data-anchor-id="making-choices-with-if-else-and-else-if">Making choices with <code>if</code>, <code>else</code>, and <code>else if</code></h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1049903417" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="repeating-yourself-with-vectorized-functions" class="level4">
+<h4 class="anchored" data-anchor-id="repeating-yourself-with-vectorized-functions">Repeating yourself with <em>vectorized</em> functions</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1049903430" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="repeating-yourself-with-for-loops" class="level4">
+<h4 class="anchored" data-anchor-id="repeating-yourself-with-for-loops">Repeating yourself with <code>for</code> loops</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1049903438" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+</section>
+<section id="in-class-activity" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-activity">In-class activity</h2>
+<p>In PROG102 you wrote functions to extract temperatures, exposures, and time from the <code>kefj</code> dataset. Here, you’ll use loops and if-then statements to calculate extreme hot and cold exposure across sites and season.</p>
+<p><span class="citation" data-cites="traiger2022">Traiger et al. (<a href="#ref-traiger2022" role="doc-biblioref">2022</a>)</span> defined extreme hot and cold exposure as <em>air</em> temperatures ≥25°C and ≤-4°C, respectively. The goal here is to calculate the hours of extreme hot and cold exposure on average per day in each site and season. For example, on average, how many hours of extreme heat did mussels in Aialik experience in summer?</p>
+<section id="review-write-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="review-write-a-function">Review: write a function</h3>
+<p>Your first task is to review what you learned in PROG102 by writing a function to <em>encapsulate</em> a procedure.</p>
+<p><strong>P1</strong> Describe succinctly what the following code does. This should be a high-level, one-sentence description, not a line-by-line breakdown.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember the most common sampling interval from PROG101! Each temperature record represents 30 minutes of time.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="st">"Nuka_Pass"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>season <span class="ot">&lt;-</span> <span class="st">"Late winter"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>n_cold <span class="ot">&lt;-</span> <span class="fu">sum</span>(kefj_site <span class="sc">==</span> site <span class="sc">&amp;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                kefj_season <span class="sc">==</span> season <span class="sc">&amp;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                kefj_temperature <span class="sc">&lt;=</span> <span class="sc">-</span><span class="dv">4</span> <span class="sc">&amp;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                kefj_exposure <span class="sc">==</span> <span class="st">"air"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(kefj_site <span class="sc">==</span> site <span class="sc">&amp;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                 kefj_season <span class="sc">==</span> season)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>hours_cold <span class="ot">&lt;-</span> n_cold <span class="sc">*</span> <span class="dv">30</span> <span class="sc">/</span> <span class="dv">60</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>days_total <span class="ot">&lt;-</span> n_total <span class="sc">*</span> <span class="dv">30</span> <span class="sc">/</span> <span class="dv">60</span> <span class="sc">/</span> <span class="dv">24</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>hours_cold_per_day <span class="ot">&lt;-</span> hours_cold <span class="sc">/</span> days_total</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>hours_cold_per_day</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>P2</strong> Let’s turn that code chunk into a function. What would you call that function? How many parameters should it take and what would you call them?</p>
+<p><strong>P3</strong> Write a function to encapsulate the code chunk above. Check that it contains all five parts of a function.</p>
+</section>
+<section id="make-an-extreme-choice" class="level3">
+<h3 class="anchored" data-anchor-id="make-an-extreme-choice">Make an extreme choice</h3>
+<p>The code chunk above focuses on extreme <em>cold</em> exposure, but we would like to use a similar procedure for extreme <em>heat</em> exposure. In order, here’s what we’ll do.</p>
+<ol type="1">
+<li>Use an <code>if else</code> statement to create a logical vector indicating whether temperatures are extreme.</li>
+<li>Incorporate the new logical vector into our old code chunk to make it more flexible.</li>
+<li>Add a parameter to your function so it can handle extreme heat <em>or</em> cold.</li>
+</ol>
+<p><strong>P4</strong> Fill in the code below to create a logical vector indicating extreme temperatures.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>extreme_type <span class="ot">&lt;-</span> <span class="st">"cold"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (??? <span class="sc">==</span> <span class="st">"???"</span>) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  is_extreme <span class="ot">&lt;-</span> kefj_temperature ??? ???</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>} ??? {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  ???</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>P5</strong> Copy-paste the code from P1 and edit it to incorporate the <code>is_extreme</code> vector into the extreme temperature exposure procedure.</p>
+<p><strong>P6</strong> Copy-paste the function you wrote in P3 and edit it to add a parameter that lets you switch between extreme heat and cold exposure.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure that when you edit the function you choose readable names for the function, its parameters, and any variables you define in the body!</p>
+</div>
+</div>
+</section>
+<section id="season-to-taste" class="level3">
+<h3 class="anchored" data-anchor-id="season-to-taste">Season to taste</h3>
+<p>In the previous section, you used <code>if then</code> to make choices. Now, you’re going to use <code>for</code> loops to repeat an operation over multiple inputs. In order, you’ll:</p>
+<ol type="1">
+<li>Identify the unique seasons to loop over</li>
+<li>Calculate extreme heat and cold exposure in each season (for a given site)</li>
+<li>Add a <em>nested</em> loop to iterate over the unique sites, as well</li>
+</ol>
+<p>When you’re done, you’ll use the results of your loops to find the <em>mildest</em> season in Alaska.</p>
+<p><strong>P7</strong> What seasons are in the <code>kefj</code> dataset? What function would you use to identify them?</p>
+<p><strong>P8</strong> Fill in the blanks below to make a <code>for</code> loop that prints the extreme hot and cold exposure across seasons at site Aialik.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>seasons <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (??? <span class="cf">in</span> ???) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  heat_exposure <span class="ot">&lt;-</span> ???(???, ???, <span class="st">"hot"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  cold_exposure <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Aialik"</span>, ???, heat_exposure, cold_exposure))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>P9</strong> Copy-paste your answer to P8 and add a nested <code>for</code> loop to iterate across sites as well as seasons.</p>
+<p><strong>P10</strong> Examine your results from P9. You should find two outputs where both extreme heat and cold exposure were 0. What season were they in?</p>
+</section>
+</section>
+<section id="recap-and-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="recap-and-next-steps">Recap and next steps</h2>
+<p>In this module you learned how to make make decisions and repeat yourself - key skills for writing complex code!</p>
+<p>This completes the essential coding skills you need for this class. Options for next steps are:</p>
+<p>INFO101 - learn how data are organized in tables.</p>
+<p>PRST101 - learn to summarize data and prepare for probability and statistics.</p>
+<p>COMM101 - learn to visualize data and begin making publication-quality figures (but do INFO101 first).</p>
+<p>Fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkluaWkR8Q1icsBGynAcPzNK7ebYABtLs6tNCB9BTLplo9gA/viewform?usp=header">PROG103 reflection</a> to complete this module. Well done!</p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-traiger2022" class="csl-entry" role="listitem">
+Traiger, Sarah B., James L. Bodkin, Heather A. Coletti, Brenda Ballachey, Thomas Dean, Daniel Esler, Katrin Iken, et al. 2022. <span>“Evidence of Increased Mussel Abundance Related to the Pacific Marine Heatwave and Sea Star Wasting.”</span> <em>Marine Ecology</em> 43 (4). <a href="https://doi.org/10.1111/maec.12715">https://doi.org/10.1111/maec.12715</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
