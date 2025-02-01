@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,6 +73,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,8 +282,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-class-preparation" id="toc-pre-class-preparation" class="nav-link active" data-scroll-target="#pre-class-preparation">Pre-class preparation</a>
+  <ul class="collapse">
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</a></li>
+  </ul></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity">In-class activity</a>
+  <ul class="collapse">
+  <li><a href="#questionable-organization-choices" id="toc-questionable-organization-choices" class="nav-link" data-scroll-target="#questionable-organization-choices">Questionable organization choices</a></li>
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data">Importing data</a></li>
+  <li><a href="#fix-the-column-names" id="toc-fix-the-column-names" class="nav-link" data-scroll-target="#fix-the-column-names">Fix the column names</a></li>
+  <li><a href="#analyzing-wide-format-data" id="toc-analyzing-wide-format-data" class="nav-link" data-scroll-target="#analyzing-wide-format-data">Analyzing wide-format data</a></li>
+  <li><a href="#analyzing-long-format-data" id="toc-analyzing-long-format-data" class="nav-link" data-scroll-target="#analyzing-long-format-data">Analyzing long-format data</a></li>
+  </ul></li>
+  <li><a href="#recap-and-next-steps" id="toc-recap-and-next-steps" class="nav-link" data-scroll-target="#recap-and-next-steps">Recap and next steps</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,8 +325,172 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This is the first module of the <strong>Informatics</strong> track. By the end of this module, you’ll learn how to:</p>
+<ul>
+<li><p>Organize tabular data using “tidy” principles</p></li>
+<li><p>Create data frames in R</p></li>
+<li><p>Extract data frames using 2-D indexing</p></li>
+</ul>
+<section id="pre-class-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="pre-class-preparation">Pre-class preparation</h2>
+<p>Set up the <a href="https://github.com/MarineCS-100B/info101">INFO101 module</a> on your computer (see <a href="../../../modules.html">Module Setup and Submission</a>). There you’ll find the guided notes and exercises to accompany these recorded lectures.</p>
+<section id="lectures" class="level3">
+<h3 class="anchored" data-anchor-id="lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</h3>
+<section id="what-makes-data-tidy" class="level4">
+<h4 class="anchored" data-anchor-id="what-makes-data-tidy">What makes data tidy?</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1052471519" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="creating-data-frames-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="creating-data-frames-in-r">Creating data frames in R</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1052471523" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="indexing-into-rows-and-columns" class="level4">
+<h4 class="anchored" data-anchor-id="indexing-into-rows-and-columns">Indexing into rows and columns</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1052471530" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+</section>
+<section id="in-class-activity" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-activity">In-class activity</h2>
+<p>The World Ocean Atlas (WOA) is a very important dataset in marine science. It is the easiest way to access data from the World Ocean Database (WOD), which is the most comprehensive collection of physical and biogeochemical oceanographic data ever assembled. The WOD is so valuable because it has been extensively reviewed and standardized, combining over <strong>250 years</strong> of measurements in one place. Whereas the WOD is highly detailed, the WOA is a higher-level summary of this amazing dataset. The WOA is what we will be using today.</p>
+<p>By the end of this module, you’ll make a figure similar to the one below. This figures shows the relationship between temperature and depth in the ocean about 500 miles west of here. Your figure won’t be as clean yet, but you’ll learn how to do that in COMM101!</p>
+<p><img src="images/final_product.png" class="img-fluid" width="500"></p>
+<section id="questionable-organization-choices" class="level3">
+<h3 class="anchored" data-anchor-id="questionable-organization-choices">Questionable organization choices</h3>
+<p>Yes, the WOA is an incredible resource. However, you will soon discover that it does not adhere to the tidy data principles you learned in the pre-class videos. This makes the dataset quite challenging to work with in R! Nothing gives you an appreciation for <em>tidy data</em> quite like struggling with weird data.</p>
+<p>First, download the latest version of the WOA (<a href="https://drive.google.com/file/d/1hDWoT69ju03iWEORK4a0uu2r31_DCtFb/view?usp=drive_link">available here on Drive</a>) and put it in your info101 directory.</p>
+<p><strong>P1</strong> Call the function <code>dir()</code> at the console. This lists the files in your project’s directory. Do you see woa.csv in the list? (If you don’t, move it to the right place before proceeding.)</p>
+<p>Let’s look at the contents of woa.csv in a spreadsheet viewer. You can use Excel if you have it on your computer or follow <a href="https://docs.google.com/spreadsheets/d/1VgszOWlnoX5QFIndAbAa90MxdXz5aLZahKNgLlY1Fy8/edit?usp=sharing">this link</a> to view it in Google Sheets. Critique the organization of this spreadsheet according to the characteristics of tidy data. Recall, those are:</p>
+<ol type="1">
+<li>Make it a rectangle</li>
+<li>Don’t confuse the computer</li>
+<li>Consistent names and formats</li>
+</ol>
+<p><strong>P2</strong> Critique the organization of woa.csv according to the characteristics of tidy data.</p>
+</section>
+<section id="importing-data" class="level3">
+<h3 class="anchored" data-anchor-id="importing-data">Importing data</h3>
+<p>Now we’re going to import the WOA into R. By the end of this section we will have a data frame with columns for <code>latitude</code>, <code>longitude</code>, and the many depth bins. Which is to say, you’re importing the <em>wide-format</em> version of the WOA, which is how this dataset is distributed.</p>
+<p><strong>P3</strong> Call <code>read.csv()</code> on woa.csv. What error message do you get? What do you think that means?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It may help to look at the contents of woa.csv in a spreadsheet viewer again.</p>
+</div>
+</div>
+<p>Let’s fix that error! Check the help page for <code>read.csv()</code> and look at the available parameters for <code>read.table()</code>. These parameters also apply to <code>read.csv()</code>. Which parameter do you think can help us avoid the problem in P3?</p>
+<p><strong>P4</strong> Re-write the call to <code>read.csv()</code> to avoid the error in P3.</p>
+<p>Now we have a data frame with the WOA data. Call <code>View()</code> on your data frame to see the data in RStudio’s viewer. You’ll notice we still have two issues.</p>
+<ol type="1">
+<li>The column names are very messy.</li>
+<li>The depth variable is spread across 102 columns!</li>
+</ol>
+<p>We’ll fix the first issue in this activity. The solution to the second issue (i.e., switching from wide to long format) is a technique called <em>pivoting</em>, which is outside the scope of this module. In a later section I will provide you with the pivoted, long-format version of the WOA in the course package.</p>
+</section>
+<section id="fix-the-column-names" class="level3">
+<h3 class="anchored" data-anchor-id="fix-the-column-names">Fix the column names</h3>
+<p>We need a character vector with clean column names to replace the messy ones. The first two columns are latitude and longitude, the next 102 columns are the different depths. First, we’re going to make a numeric vector of the different depth values. From there, we’ll create a character vector with clean column names.</p>
+<p><strong>P5</strong> Fill in the blanks below to create a vector of the depth values.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>seq()</code> creates a <em>seq</em>uence of values. Can you figure out how it works from context? Alternatively, check out the help page for details.</p>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>depths <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">5</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(???, ???, <span class="at">by =</span> <span class="dv">25</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(???, ???, <span class="at">by =</span> ???),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(???)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>P6</strong> Create a vector called <code>woa_colnames</code> with clean names for all 104 columns. Make them the column names of your WOA data frame.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>paste0()</code> is a useful command for making column names (and other character vectors) from numeric vectors.</p>
+</div>
+</div>
+</section>
+<section id="analyzing-wide-format-data" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-wide-format-data">Analyzing wide-format data</h3>
+<p>To show why long format is considered tidier than wide format, we’re going to try summarizing the wide-format version of the WOA. Then you’ll do the same with the long-format version and compare the differences.</p>
+<section id="summary-statistics-wide-format" class="level4">
+<h4 class="anchored" data-anchor-id="summary-statistics-wide-format">Summary statistics (wide-format)</h4>
+<p>Try to use indexing and summary statistic functions to answer the following question. This won’t be straightforward! The function <code>mean()</code> doesn’t work across columns in a data frame. You’ll have to get creative to figure out a solution. But in PROG101-PROG103 you learned the skills you need to accomplish it.</p>
+<p><strong>P7</strong> What is the mean water temperature globally in the <em>twilight zone</em> (200-1000m depth)?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By globally I mean across all locations, so no filtering by latitude or longitude necessary.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="analyzing-long-format-data" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-long-format-data">Analyzing long-format data</h3>
+<p>At this point you’ve imported a gnarly CSV file and tried analyzing it in wide-format. Not easy, is it? In this final section, you’ll get a taste of how long-format data frames make data analysis and visualization easier.</p>
+<p>A long-format version of the WOA is availabile in the course companion package, marinecs100b, under the name <code>woa_long</code>. Explore it on your own (e.g., using the help page or <code>View()</code>) to get a feel for it, then proceed to the following sections.</p>
+<section id="summary-statistics-long-format" class="level4">
+<h4 class="anchored" data-anchor-id="summary-statistics-long-format">Summary statistics (long-format)</h4>
+<p>This will be the same question as before, but with the long-format data instead of the wide-format.</p>
+<p><strong>P8</strong> Using <code>woa_long</code>, find the mean water temperature globally in the twilight zone.</p>
+<p><strong>P9</strong> Compare and contrast your solutions to P8 and P9.</p>
+</section>
+<section id="whats-the-temperature-of-the-mariana-trench" class="level4">
+<h4 class="anchored" data-anchor-id="whats-the-temperature-of-the-mariana-trench">What’s the temperature of the Mariana Trench?</h4>
+<p>The Mariana Trench is located 11°21′N, 142°12′E. You’re going to filter <code>woa_long</code> to the nearest location and make a figure of the temperature profile with depth. This will end up looking similar to the “Temperature depth profile 500 miles west of Santa Barbara” figure from the beginning of this activity.</p>
+<p>This is the first time you’re using <code>ggplot</code> directly, which is the most popular tool for making figures in R. You’ll learn more about how it works in COMM101.</p>
+<p><strong>P10</strong> Create a variable called <code>mariana_temps</code>. Filter <code>woa_long</code> to the rows in the location nearest to the coordinates listed above.</p>
+<p>The sample code provided below will make a temperature-depth profile of the Mariana Trench using the variable you created in P10. Run it to create a figure.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot is a tool for making figures, you'll learn its details in COMM101</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mariana_temps, <span class="fu">aes</span>(temp_c, depth_m)) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>() <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_reverse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>P11</strong> Interpret your temperature-depth profile. What’s the temperature at the surface? How about in the deepest parts? Over what depth range does temperature change the most?</p>
+</section>
+</section>
+</section>
+<section id="recap-and-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="recap-and-next-steps">Recap and next steps</h2>
+<p>You learned a lot in this module!</p>
+<ul>
+<li><p>What makes data <em>tidy</em>?</p></li>
+<li><p>How to create, import, and index into data frames</p></li>
+<li><p>A taste of analyzing and visualizing data</p></li>
+</ul>
+<p>You also debugged data import errors for the first time. Talk to any marine scientists working with data - that’s definitely a skill they wish they had learned earlier!</p>
+<p>Fill out the <a href="https://forms.gle/KdxCtniqmaPkKNck7">INFO101 reflection</a> to complete this module.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
