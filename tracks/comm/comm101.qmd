@@ -1,3 +1,73 @@
 ---
 title: "COMM101: Data Visualization with ggplot"
 ---
+
+Welcome the **Communication** track. By the end of this module, you'll learn how to:
+
+-   Describe the basic components of a data visualization
+
+-   Create figures in R using ggplot
+
+-   Enhance the visual appearance using scales and themes
+
+## Pre-class preparation
+
+Set up the [COMM101 module](https://github.com/MarineCS-100B/comm101) on your computer (see [Module Setup and Submission](../../../modules.html)). There you'll find the guided notes and exercises to accompany these recorded lectures.
+
+### {{< fa film title="A roll of film" >}} Lectures
+
+#### Welcome to the grammar of graphics
+
+{{< video https://vimeo.com/1053920921 >}}
+
+#### Introducing ggplot
+
+{{< video https://vimeo.com/1053920938 >}}
+
+#### Customization with scales and themes
+
+{{< video https://vimeo.com/1053920948 >}}
+
+## In-class activity
+
+We introduced the the World Ocean Atlas (WOA) in INFO101 to examine worldwide seawater temperatures. The WOA contains a lot of oceanographic data, not just temperature. In this module, we'll use the WOA and ggplot to visualize global sea surface salinity patterns.
+
+### Distributions of continuous variables
+
+Recall our options for visualizing the distribution of continuous variables.
+
+**P1** What type of visualization is appropriate for a single continuous variable?
+
+**P2** What type of visualization is appropriate for a continuous variable across categorical variables?
+
+Now we'll use these visualization types to look at the distribution of sea surface salinity. In the course companion package, you'll find a data frame called `woa_sal` containing sea surface salinity data from the WOA.
+
+::: callout-tip
+You're going to be saving several figures in this exercise. ggplot includes a function `ggsave()` that automates exporting ggplot figures to files. I encourage you to explore the help page to see how it works and the options available.
+:::
+
+**P3** Use ggplot to visualize the distribution of sea surface salinity. Save your figure as "comm101p3.png".
+
+**P4** Use ggplot to visualize the distribution of sea surface salinity *by ocean basin*. Save your figure as "comm101p4.png".
+
+**P5** Interpret your figures from P3 and P4. What patterns do you notice?
+
+**P6** Critique your figures from P3 and P4. What changes would highlight the patterns you interpreted in P5? You don't need to write code for these changes, just describe them verbally.
+
+### Relationships between continuous variables
+
+In the previous section you visualized salinity at global and regional scales. Now we're going to dig deeper into fine-scale patterns.
+
+::: callout-note
+Don't be fooled by the brevity of the following question - this one may be tricky! Think carefully about the components of ggplot you learned about in the pre-class videos and exercises. What geometries and aesthetics are relevant here?
+:::
+
+**P7** Visualize the relationship between salinity and latitude by ocean basin.
+
+**P8** Edit your figure from P7 to improve its interpretability in at least one of the following categories: visually differentiating the oceans, appropriateness of the labels, or use of negative space. Save this figure as "comm101p8.png".
+
+## Recap and wrap up
+
+In this module you learned how to make figures using ggplot. ggplot is one of the most popular tools for making scientific figures out there. It features in scientific journals, newspapers, and other sources. You'll be using it a lot in your scientific career for exploring data and visually interpreting analyses!
+
+Once you've completed the pre-class exercises and in-class activity, submit this module on GitHub.

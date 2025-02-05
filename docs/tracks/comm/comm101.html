@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,8 +248,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-class-preparation" id="toc-pre-class-preparation" class="nav-link active" data-scroll-target="#pre-class-preparation">Pre-class preparation</a>
+  <ul class="collapse">
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</a></li>
+  </ul></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity">In-class activity</a>
+  <ul class="collapse">
+  <li><a href="#distributions-of-continuous-variables" id="toc-distributions-of-continuous-variables" class="nav-link" data-scroll-target="#distributions-of-continuous-variables">Distributions of continuous variables</a></li>
+  <li><a href="#relationships-between-continuous-variables" id="toc-relationships-between-continuous-variables" class="nav-link" data-scroll-target="#relationships-between-continuous-variables">Relationships between continuous variables</a></li>
+  </ul></li>
+  <li><a href="#recap-and-wrap-up" id="toc-recap-and-wrap-up" class="nav-link" data-scroll-target="#recap-and-wrap-up">Recap and wrap up</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,8 +288,85 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Welcome the <strong>Communication</strong> track. By the end of this module, you’ll learn how to:</p>
+<ul>
+<li><p>Describe the basic components of a data visualization</p></li>
+<li><p>Create figures in R using ggplot</p></li>
+<li><p>Enhance the visual appearance using scales and themes</p></li>
+</ul>
+<section id="pre-class-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="pre-class-preparation">Pre-class preparation</h2>
+<p>Set up the <a href="https://github.com/MarineCS-100B/comm101">COMM101 module</a> on your computer (see <a href="../../../modules.html">Module Setup and Submission</a>). There you’ll find the guided notes and exercises to accompany these recorded lectures.</p>
+<section id="lectures" class="level3">
+<h3 class="anchored" data-anchor-id="lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</h3>
+<section id="welcome-to-the-grammar-of-graphics" class="level4">
+<h4 class="anchored" data-anchor-id="welcome-to-the-grammar-of-graphics">Welcome to the grammar of graphics</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920921" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="introducing-ggplot" class="level4">
+<h4 class="anchored" data-anchor-id="introducing-ggplot">Introducing ggplot</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920938" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="customization-with-scales-and-themes" class="level4">
+<h4 class="anchored" data-anchor-id="customization-with-scales-and-themes">Customization with scales and themes</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920948" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+</section>
+<section id="in-class-activity" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-activity">In-class activity</h2>
+<p>We introduced the the World Ocean Atlas (WOA) in INFO101 to examine worldwide seawater temperatures. The WOA contains a lot of oceanographic data, not just temperature. In this module, we’ll use the WOA and ggplot to visualize global sea surface salinity patterns.</p>
+<section id="distributions-of-continuous-variables" class="level3">
+<h3 class="anchored" data-anchor-id="distributions-of-continuous-variables">Distributions of continuous variables</h3>
+<p>Recall our options for visualizing the distribution of continuous variables.</p>
+<p><strong>P1</strong> What type of visualization is appropriate for a single continuous variable?</p>
+<p><strong>P2</strong> What type of visualization is appropriate for a continuous variable across categorical variables?</p>
+<p>Now we’ll use these visualization types to look at the distribution of sea surface salinity. In the course companion package, you’ll find a data frame called <code>woa_sal</code> containing sea surface salinity data from the WOA.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’re going to be saving several figures in this exercise. ggplot includes a function <code>ggsave()</code> that automates exporting ggplot figures to files. I encourage you to explore the help page to see how it works and the options available.</p>
+</div>
+</div>
+<p><strong>P3</strong> Use ggplot to visualize the distribution of sea surface salinity. Save your figure as “comm101p3.png”.</p>
+<p><strong>P4</strong> Use ggplot to visualize the distribution of sea surface salinity <em>by ocean basin</em>. Save your figure as “comm101p4.png”.</p>
+<p><strong>P5</strong> Interpret your figures from P3 and P4. What patterns do you notice?</p>
+<p><strong>P6</strong> Critique your figures from P3 and P4. What changes would highlight the patterns you interpreted in P5? You don’t need to write code for these changes, just describe them verbally.</p>
+</section>
+<section id="relationships-between-continuous-variables" class="level3">
+<h3 class="anchored" data-anchor-id="relationships-between-continuous-variables">Relationships between continuous variables</h3>
+<p>In the previous section you visualized salinity at global and regional scales. Now we’re going to dig deeper into fine-scale patterns.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t be fooled by the brevity of the following question - this one may be tricky! Think carefully about the components of ggplot you learned about in the pre-class videos and exercises. What geometries and aesthetics are relevant here?</p>
+</div>
+</div>
+<p><strong>P7</strong> Visualize the relationship between salinity and latitude by ocean basin.</p>
+<p><strong>P8</strong> Edit your figure from P7 to improve its interpretability in at least one of the following categories: visually differentiating the oceans, appropriateness of the labels, or use of negative space. Save this figure as “comm101p8.png”.</p>
+</section>
+</section>
+<section id="recap-and-wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="recap-and-wrap-up">Recap and wrap up</h2>
+<p>In this module you learned how to make figures using ggplot. ggplot is one of the most popular tools for making scientific figures out there. It features in scientific journals, newspapers, and other sources. You’ll be using it a lot in your scientific career for exploring data and visually interpreting analyses!</p>
+<p>Once you’ve completed the pre-class exercises and in-class activity, submit this module on GitHub.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
