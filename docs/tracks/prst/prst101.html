@@ -20,7 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -39,6 +93,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,8 +302,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-class-preparation" id="toc-pre-class-preparation" class="nav-link active" data-scroll-target="#pre-class-preparation">Pre-class preparation</a>
+  <ul class="collapse">
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</a></li>
+  </ul></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity">In-class activity</a>
+  <ul class="collapse">
+  <li><a href="#frequency-of-occurrence" id="toc-frequency-of-occurrence" class="nav-link" data-scroll-target="#frequency-of-occurrence">Frequency of occurrence</a></li>
+  <li><a href="#simulating-samples" id="toc-simulating-samples" class="nav-link" data-scroll-target="#simulating-samples">Simulating samples</a></li>
+  </ul></li>
+  <li><a href="#recap-and-wrap-up" id="toc-recap-and-wrap-up" class="nav-link" data-scroll-target="#recap-and-wrap-up">Recap and wrap up</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,10 +342,216 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Welcome the <strong>Probability and Statistics</strong> track. By the end of this module, you’ll learn how to:</p>
+<ul>
+<li><p>Define samples and populations</p></li>
+<li><p>Describe samples using summary statistics</p></li>
+<li><p>Simulate samples to explore patterns</p></li>
+</ul>
+<section id="pre-class-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="pre-class-preparation">Pre-class preparation</h2>
+<p>Set up the <a href="https://github.com/MarineCS-100B/prst101">PRST101 module</a> on your computer (see <a href="../../../modules.html">Module Setup and Submission</a>). There you’ll find the guided notes and exercises to accompany these recorded lectures.</p>
+<section id="lectures" class="level3">
+<h3 class="anchored" data-anchor-id="lectures"><i class="fa-solid fa-film" title="A roll of film" aria-label="film"></i> Lectures</h3>
+<section id="samples-and-populations" class="level4">
+<h4 class="anchored" data-anchor-id="samples-and-populations">Samples and populations</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920921" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="summary-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="summary-statistics">Summary statistics</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920938" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="simulation" class="level4">
+<h4 class="anchored" data-anchor-id="simulation">Simulation</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920948" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="welcome-to-the-twilight-zone" class="level4">
+<h4 class="anchored" data-anchor-id="welcome-to-the-twilight-zone">Welcome to the Twilight Zone</h4>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1053920948" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+</section>
+<section id="in-class-activity" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-activity">In-class activity</h2>
+<p>Dr Iglesias investigates the connections between <em>epipelagic</em> (near surface) and <em>mesopelagic</em> (mid-ocean, 200-1000m) ecosystems. One chapter of her PhD <span class="citation" data-cites="iglesias2023">(<a href="#ref-iglesias2023" role="doc-biblioref">Iglesias et al. 2023</a>)</span> investigated the <em>frequency of occurrence</em> (FO) of mesopelagic fishes in marine predators’ stomachs. This work robustly demonstrated that many ecologically, culturally, and economically important marine predators frequently consume mesopelagic prey.</p>
+<p>In this module, you’ll replicate part of Dr Iglesias’ analysis and use simulations to explore how sample sizes affect accuracy.</p>
+<section id="frequency-of-occurrence" class="level3">
+<h3 class="anchored" data-anchor-id="frequency-of-occurrence">Frequency of occurrence</h3>
+<p>Dr Iglesias’ paper used data from the California Current Trophic Database <span class="citation" data-cites="bizzarro2023">(<a href="#ref-bizzarro2023" role="doc-biblioref">Bizzarro et al. 2023</a>)</span>, which contains &gt;100k diet samples from ~140 marine predators collected over 50 years. In the course companion package, you’ll find the data frame <code>cctd_meso</code>, which contains the relevant portions of the database. We’ll use those data to repeat the data summarizing steps required to create the figure below (Fig. 1B in the original paper).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/iglesiasetal2023fig1b.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Figure 1B from Iglesias et al.&nbsp;(2023).</figcaption>
+</figure>
+</div>
+<section id="predator-level-summary" class="level4">
+<h4 class="anchored" data-anchor-id="predator-level-summary">Predator-level summary</h4>
+<p>Each row in <code>cctd_meso</code> represents one prey item from a diet sample. Therefore an individual predator may be represented by multiple rows in the database. The columns <code>meso_prey</code> and <code>cpf_prey</code> indicate whether the prey item was a <em>mesopelagic</em> or <em>coastal pelagic fish</em> species.</p>
+<p><strong>P1</strong> Filter <code>cctd_meso</code> to rows representing the predator with id 99112. What was species was the predator? How many prey items were in their diet sample? How many of those prey were mesopelagic or coastal pelagic fish species?</p>
+<p><strong>P2</strong> Summarize <code>cctd_meso</code> at the predator level (i.e., each row in the summary should represent one predator), indicating whether the predator’s diet sample contained mesopelagic and/or coastal pelagic fish species. Call the summary columns <code>any_meso</code> and <code>any_cpf</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The summary function <code>any()</code> will help here.</p>
+</div>
+</div>
+</section>
+<section id="species-level-summary" class="level4">
+<h4 class="anchored" data-anchor-id="species-level-summary">Species-level summary</h4>
+<p>The summary statistic used by Iglesias et al.&nbsp;was <em>frequency of occurrence</em> (FO). At the species level, the mesopelagic FO is the proportion of diet samples (within a species) that contained any mesopelagic fish. The same principle applies to the coastal pelagic fish FO.</p>
+<p><strong>P3</strong> Using the data frame you created in P2, create a species-level summary that contains columns for mesopelagic FO (<code>meso_fo</code>), coastal pelagic fish FO (<code>cpf_fo</code>), and predator sample size (<code>n</code>).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One of the grouping variables you’ll need for P3 may not be in your response to P2. If necessary, revisit your solution and add it in.</p>
+</div>
+</div>
+<p><strong>P4</strong> How many predator species had a mesopelagic FO greater than 0.5? Which of those predator species had the largest sample size?</p>
+<p>The code chunk below creates a figure very similar to the original version in the Iglesias et al.&nbsp;paper. I encourage you to try to adapt it to work with the data frame you created in P3!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>species_scale <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Only retain predator species that ate mesopelagic fish</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(fo_meso <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Flip sign of coastal pelagic FO (for plotting purposes)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fo_cpf =</span> <span class="sc">-</span>fo_cpf,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Format name and sample size </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"%s (%d)"</span>, predator_scientific_name, n_predators),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Order labels by descending mesopelagic FO</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">label =</span> <span class="fu">fct_reorder</span>(label, fo_meso)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Rename fo_* columns to human-readable</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Coastal pelagic fish</span><span class="st">`</span> <span class="ot">=</span> fo_cpf,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Mesopelagic fish</span><span class="st">`</span> <span class="ot">=</span> fo_meso) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Pivot frequency of occurence columns to long format</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">ends_with</span>(<span class="st">"Fish"</span>), <span class="at">values_to =</span> <span class="st">"fo"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create column chart</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> fo, <span class="at">y =</span> label, <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">color =</span> <span class="st">"grey10"</span>) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="st">"Frequency of occurence"</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Predator taxa"</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Prey type"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey70"</span>, <span class="st">"navy"</span>)) <span class="sc">+</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="fl">0.99</span>, <span class="fl">0.01</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"meso_cpf_fo.png"</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">units =</span> <span class="st">"in"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="simulating-samples" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-samples">Simulating samples</h3>
+<p>The CCTD contains a <em>sample</em> of the food web in the California Current. As you learned in the pre-class videos, samples have the potential to mislead your inferences about the <em>population</em>. Here, we’ll investigate that potential using simulation.</p>
+<p>Since we’ll be using random numbers, we first have to set the seed to make sure we all get the same result. Run the following code to set the seed to 123.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="how-sensitive-are-rankings-to-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="how-sensitive-are-rankings-to-sampling">How sensitive are rankings to sampling?</h4>
+<p>Two species consumed mesopelagic fish more frequently in the CCTD sample than any other taxa: <em>Lissodelphis borealis</em> and <em>Delphinus delphis</em>.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/640x427-northern-right-whale-dolphin.png" class="img-fluid figure-img" width="300"></p>
+<figcaption><em>Lissodelphis borealis</em> (Northern right whale dolphin)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/640x427-short-beaked-common-dolphin.png" class="img-fluid figure-img" width="300"></p>
+<figcaption><em>Delphinus delphis</em> (Short-beaked common dolphin)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><strong>P5</strong> In the sample, <em>Lissodelphis</em> had a slightly higher mesopelagic FO than <em>Delphinus</em>. Do you think that relative order reflects the true difference in the population? Why or why not?</p>
+<p>Let’s assume the mesopelagic FO for these two species in the sample is an accurate reflection of the population. I.e., we will assume 89.3% of all <em>Lissodelphis borealis</em> stomachs and 85.7% of all <em>Delphinus delphis</em> stomachs in the California Current contain mesopelagic fish. We’re going to simulate out how often repeating the CCTD sample would give us the wrong ranking. In other words, we’ll ask how often our samples would show a higher mesopelagic FO for <em>Delphinus</em> than <em>Lissodelphis</em>, even though the reverse is true in the population</p>
+<p><strong>P6</strong> Fill in the blanks below to simulate 1000 new samples. Keep the size and probabilities the same as the original sample. Of the 1000 simulated samples, what fraction show the wrong order (i.e., mesopelagic FO greater in <em>Delphinus</em> than <em>Lissodelphis</em>)?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lissodelphis_samples <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1000</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">size =</span> ???,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">prob =</span> ???)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>lissodelphis_fo <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>delphinus_samples <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1000</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">size =</span> ???,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                            <span class="at">prob =</span> ???)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>delphinus_fo <span class="ot">&lt;-</span> ???</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>wrong_order <span class="ot">&lt;-</span> ???</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>P7</strong> How does your result in P6 influence your confidence in the sample result that <em>Lissodelphis</em> consume mesopelagic prey more frequently than <em>Delphinus</em>?</p>
+</section>
+<section id="sample-size-effects" class="level4">
+<h4 class="anchored" data-anchor-id="sample-size-effects">Sample size effects</h4>
+<p>Mesopelagic fish were found in the stomachs of <em>Histioteuthidae</em> and <em>Dosidicus gigas</em> at very similar frequencies - 0.553 compared to 0.522. The sample contained far more <em>Dosidicus</em> than <em>Histioteuthidae</em>, though - 1136 <em>Dosidicus</em> compared to 47 <em>Histioteuthidae</em>.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/2013_Histioteuthis_heteropsis_D0550_01-960.jpg" class="img-fluid figure-img" width="300"></p>
+<figcaption><em>Histioteuthidae</em> (Cock-eyed squids)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dosidicus-hunting-350.jpg" class="img-fluid figure-img" width="300"></p>
+<figcaption><em>Dosidicus gigas</em> (Humboldt squid)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><strong>P8</strong> If you were to get new samples of the same size for these two taxa, which mesopelagic FO do you think would change more? Why?</p>
+<p><strong>P9</strong> Generate 1000 new simulated samples for <em>Histioteuthidae</em> and <em>Dosidicus gigas</em>, keeping the sample sizes and probabilities the same.</p>
+<p><strong>P10</strong> What’s the <em>mean</em> mesopelagic FO of the 1000 <em>Histioteuthidae</em> simulated samples? How about <em>Dosidicus gigas</em>? How do these means compare to the original sample?</p>
+<p><strong>P11</strong> What’s the <em>standard deviation</em> of mesopelagic FO across simulated samples for the two taxa?</p>
+<p><strong>P12</strong> How frequently did <em>Histioteuthidae</em> mesopelagic FO fall outside the range 0.45 - 0.65? How about <em>Dosidicus gigas</em>?</p>
+<p><strong>P13</strong> Based on your answers to P10-P12, what effect does sample size have on sample accuracy?</p>
+</section>
+</section>
+</section>
+<section id="recap-and-wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="recap-and-wrap-up">Recap and wrap up</h2>
+<p>In this module you learned how to make statistical summaries and use simulation to explore patterns in samples. These skills form the basis for statistical inference. In your career, you’ll use these tools frequently to test hypotheses and reach informed conclusions that account for the uncertainty we encounter as scientists.</p>
+<p>Once you’ve completed the pre-class exercises and in-class activity, submit this module on GitHub.</p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bizzarro2023" class="csl-entry" role="listitem">
+Bizzarro, Joseph J., Lynn Dewitt, Brian K. Wells, K. Alexandra Curtis, Jarrod A. Santora, and John C. Field. 2023. <span>“A Multi-Predator Trophic Database for the California Current Large Marine Ecosystem.”</span> <em>Scientific Data</em> 10 (1). <a href="https://doi.org/10.1038/s41597-023-02399-2">https://doi.org/10.1038/s41597-023-02399-2</a>.
+</div>
+<div id="ref-iglesias2023" class="csl-entry" role="listitem">
+Iglesias, Ilysa S., Jarrod A. Santora, Jerome Fiechter, and John C. Field. 2023. <span>“Mesopelagic Fishes Are Important Prey for a Diversity of Predators.”</span> <em>Frontiers in Marine Science</em> 10 (July). <a href="https://doi.org/10.3389/fmars.2023.1220088">https://doi.org/10.3389/fmars.2023.1220088</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
