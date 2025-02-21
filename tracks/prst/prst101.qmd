@@ -21,19 +21,21 @@ Set up the [PRST101 module](https://github.com/MarineCS-100B/prst101) on your co
 
 #### Samples and populations
 
-{{< video https://vimeo.com/1053920921 >}}
+{{< video https://vimeo.com/1058793197 >}}
 
 #### Summary statistics
 
-{{< video https://vimeo.com/1053920938 >}}
+{{< video https://vimeo.com/1058793220 >}}
 
 #### Simulation
 
-{{< video https://vimeo.com/1053920948 >}}
+{{< video https://vimeo.com/1058793257 >}}
 
 #### Welcome to the Twilight Zone
 
-{{< video https://vimeo.com/1053920948 >}}
+BONUS CONTENT: Interview with Dr Ily Iglesias, lead author of the paper this activity is based on.
+
+{{< video https://vimeo.com/1058793870 >}}
 
 ## In-class activity
 
@@ -76,22 +78,22 @@ The code chunk below creates a figure very similar to the original version in th
 ```{r}
 species_scale %>% 
   # Only retain predator species that ate mesopelagic fish
-  filter(fo_meso > 0) %>% 
+  filter(meso_fo > 0) %>% 
   # Flip sign of coastal pelagic FO (for plotting purposes)
-  mutate(fo_cpf = -fo_cpf,
+  mutate(cpf_fo = -cpf_fo,
          # Format name and sample size 
-         label = sprintf("%s (%d)", predator_scientific_name, n_predators),
+         label = sprintf("%s (%d)", predator_scientific_name, n),
          # Order labels by descending mesopelagic FO
-         label = fct_reorder(label, fo_meso)) %>% 
-  # Rename fo_* columns to human-readable
-  rename(`Coastal pelagic fish` = fo_cpf,
-         `Mesopelagic fish` = fo_meso) %>% 
+         label = fct_reorder(label, meso_fo)) %>% 
+  # Rename *_fo columns to human-readable
+  rename(`Coastal pelagic fish` = cpf_fo,
+         `Mesopelagic fish` = meso_fo) %>% 
   # Pivot frequency of occurence columns to long format
   pivot_longer(ends_with("Fish"), values_to = "fo") %>%
   # Create column chart
   ggplot(aes(x = fo, y = label, fill = name)) +
   geom_col(color = "grey10") +
-  scale_x_continuous("Frequency of occurence", limits = c(-1, 1)) +
+  scale_x_continuous("Frequency of occurrence", limits = c(-1, 1)) +
   labs(y = "Predator taxa") +
   scale_fill_manual("Prey type", values = c("grey70", "navy")) +
   theme_bw() +
